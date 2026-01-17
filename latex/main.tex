@@ -1,0 +1,1861 @@
+%  LaTeX support: latex@mdpi.com 
+%  For support, please attach all files needed for compiling as well as the log file, and specify your operating system, LaTeX version, and LaTeX editor.
+
+%=================================================================
+\documentclass[applsci,article,accept,pdftex,moreauthors]{Definitions/mdpi} 
+%\usepackage{showframe}
+%--------------------
+% Class Options:
+%--------------------
+%----------
+% journal
+%----------
+% Choose between the following MDPI journals:
+% acoustics, actuators, addictions, admsci, adolescents, aerobiology, aerospace, agriculture, agriengineering, agrochemicals, agronomy, ai, air, algorithms, allergies, alloys, analytica, analytics, anatomia, animals, antibiotics, antibodies, antioxidants, applbiosci, appliedchem, appliedmath, applmech, applmicrobiol, applnano, applsci, aquacj, architecture, arm, arthropoda, arts, asc, asi, astronomy, atmosphere, atoms, audiolres, automation, axioms, bacteria, batteries, bdcc, behavsci, beverages, biochem, bioengineering, biologics, biology, biomass, biomechanics, biomed, biomedicines, biomedinformatics, biomimetics, biomolecules, biophysica, biosensors, biotech, birds, bloods, blsf, brainsci, breath, buildings, businesses, cancers, carbon, cardiogenetics, catalysts, cells, ceramics, challenges, chemengineering, chemistry, chemosensors, chemproc, children, chips, cimb, civileng, cleantechnol, climate, clinpract, clockssleep, cmd, coasts, coatings, colloids, colorants, commodities, compounds, computation, computers, condensedmatter, conservation, constrmater, cosmetics, covid, crops, cryptography, crystals, csmf, ctn, curroncol, cyber, dairy, data, ddc, dentistry, dermato, dermatopathology, designs, devices, diabetology, diagnostics, dietetics, digital, disabilities, diseases, diversity, dna, drones, dynamics, earth, ebj, ecologies, econometrics, economies, education, ejihpe, electricity, electrochem, electronicmat, electronics, encyclopedia, endocrines, energies, eng, engproc, entomology, entropy, environments, environsciproc, epidemiologia, epigenomes, est, fermentation, fibers, fintech, fire, fishes, fluids, foods, forecasting, forensicsci, forests, foundations, fractalfract, fuels, future, futureinternet, futurepharmacol, futurephys, futuretransp, galaxies, games, gases, gastroent, gastrointestdisord, gels, genealogy, genes, geographies, geohazards, geomatics, geosciences, geotechnics, geriatrics, grasses, gucdd, hazardousmatters, healthcare, hearts, hemato, hematolrep, heritage, higheredu, highthroughput, histories, horticulturae, hospitals, humanities, humans, hydrobiology, hydrogen, hydrology, hygiene, idr, ijerph, ijfs, ijgi, ijms, ijns, ijpb, ijtm, ijtpp, ime, immuno, informatics, information, infrastructures, inorganics, insects, instruments, inventions, iot, j, jal, jcdd, jcm, jcp, jcs, jcto, jdb, jeta, jfb, jfmk, jimaging, jintelligence, jlpea, jmmp, jmp, jmse, jne, jnt, jof, joitmc, jor, journalmedia, jox, jpm, jrfm, jsan, jtaer, jvd, jzbg, kidneydial, kinasesphosphatases, knowledge, land, languages, laws, life, liquids, literature, livers, logics, logistics, lubricants, lymphatics, machines, macromol, magnetism, magnetochemistry, make, marinedrugs, materials, materproc, mathematics, mca, measurements, medicina, medicines, medsci, membranes, merits, metabolites, metals, meteorology, methane, metrology, micro, microarrays, microbiolres, micromachines, microorganisms, microplastics, minerals, mining, modelling, molbank, molecules, mps, msf, mti, muscles, nanoenergyadv, nanomanufacturing,\gdef\@continuouspages{yes}} nanomaterials, ncrna, ndt, network, neuroglia, neurolint, neurosci, nitrogen, notspecified, %%nri, nursrep, nutraceuticals, nutrients, obesities, oceans, ohbm, onco, %oncopathology, optics, oral, organics, organoids, osteology, oxygen, parasites, parasitologia, particles, pathogens, pathophysiology, pediatrrep, pharmaceuticals, pharmaceutics, pharmacoepidemiology,\gdef\@ISSN{2813-0618}\gdef\@continuous pharmacy, philosophies, photochem, photonics, phycology, physchem, physics, physiologia, plants, plasma, platforms, pollutants, polymers, polysaccharides, poultry, powders, preprints, proceedings, processes, prosthesis, proteomes, psf, psych, psychiatryint, psychoactives, publications, quantumrep, quaternary, qubs, radiation, reactions, receptors, recycling, regeneration, religions, remotesensing, reports, reprodmed, resources, rheumato, risks, robotics, ruminants, safety, sci, scipharm, sclerosis, seeds, sensors, separations, sexes, signals, sinusitis, skins, smartcities, sna, societies, socsci, software, soilsystems, solar, solids, spectroscj, sports, standards, stats, std, stresses, surfaces, surgeries, suschem, sustainability, symmetry, synbio, systems, targets, taxonomy, technologies, telecom, test, textiles, thalassrep, thermo, tomography, tourismhosp, toxics, toxins, transplantology, transportation, traumacare, traumas, tropicalmed, universe, urbansci, uro, vaccines, vehicles, venereology, vetsci, vibration, virtualworlds, viruses, vision, waste, water, wem, wevj, wind, women, world, youth, zoonoticdis 
+% For posting an early version of this manuscript as a preprint, you may use "preprints" as the journal. Changing "submit" to "accept" before posting will remove line numbers.
+
+%---------
+% article
+%---------
+% The default type of manuscript is "article", but can be replaced by: 
+% abstract, addendum, article, book, bookreview, briefreport, casereport, comment, commentary, communication, conferenceproceedings, correction, conferencereport, entry, expressionofconcern, extendedabstract, datadescriptor, editorial, essay, erratum, hypothesis, interestingimage, obituary, opinion, projectreport, reply, retraction, review, perspective, protocol, shortnote, studyprotocol, systematicreview, supfile, technicalnote, viewpoint, guidelines, registeredreport, tutorial
+% supfile = supplementary materials
+
+%----------
+% submit
+%----------
+% The class option "submit" will be changed to "accept" by the Editorial Office when the paper is accepted. This will only make changes to the frontpage (e.g., the logo of the journal will get visible), the headings, and the copyright information. Also, line numbering will be removed. Journal info and pagination for accepted papers will also be assigned by the Editorial Office.
+
+%------------------
+% moreauthors
+%------------------
+% If there is only one author the class option oneauthor should be used. Otherwise use the class option moreauthors.
+
+%---------
+% pdftex
+%---------
+% The option pdftex is for use with pdfLaTeX. Remove "pdftex" for (1) compiling with LaTeX & dvi2pdf (if eps figures are used) or for (2) compiling with XeLaTeX.
+
+%=================================================================
+% Packages
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{float} % for the H specifier
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{enumitem}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+%\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{pgfplotstable}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{natbib}
+\usepackage{soul}
+
+
+%=================================================================
+% MDPI internal commands - do not modify
+\firstpage{1} 
+\makeatletter 
+\setcounter{page}{\@firstpage} 
+\makeatother
+\pubvolume{14}
+\issuenum{1}
+\articlenumber{0}
+\pubyear{2024}
+\copyrightyear{2024}
+\externaleditor{\textls[-25]{Academic Editor: Firstname Lastname}}
+\datereceived{20 August 2024 } 
+\daterevised{11 September 2024 } % Comment out if no revised date
+\dateaccepted{19 September 2024 } 
+\datepublished{ } 
+%\datecorrected{} % For corrected papers: "Corrected: XXX" date in the original paper.
+%\dateretracted{} % For corrected papers: "Retracted: XXX" date in the original paper.
+\hreflink{https://doi.org/} % If needed use \linebreak
+%\doinum{}
+%\pdfoutput=1 % Uncommented for upload to arXiv.org
+%\CorrStatement{yes}  % For updates
+
+
+%=================================================================
+% Add packages and commands here. The following packages are loaded in our class file: fontenc, inputenc, calc, indentfirst, fancyhdr, graphicx, epstopdf, lastpage, ifthen, float, amsmath, amssymb, lineno, setspace, enumitem, mathpazo, booktabs, titlesec, etoolbox, tabto, xcolor, colortbl, soul, multirow, microtype, tikz, totcount, changepage, attrib, upgreek, array, tabularx, pbox, ragged2e, tocloft, marginnote, marginfix, enotez, amsthm, natbib, hyperref, cleveref, scrextend, url, geometry, newfloat, caption, draftwatermark, seqsplit
+% cleveref: load \crefname definitions after \begin{document}
+
+%=================================================================
+% Please use the following mathematics environments: Theorem, Lemma, Corollary, Proposition, Characterization, Property, Problem, Example, ExamplesandDefinitions, Hypothesis, Remark, Definition, Notation, Assumption
+%% For proofs, please use the proof environment (the amsthm package is loaded by the MDPI class).
+
+%=================================================================
+% Full title of the paper (Capitalized)
+\Title{\highlighting{A Transparent Pipeline} %MDPI: Dear Authors---IMPORTANT NOTE,
+%(1) Please proofread the article format according to the comments left and pay attention to the highlighted parts.
+%(2) Please do not delete the comments during your proofreading, since we need to check point by point after receiving your proofed version.
+%(3) Please just modify or confirm or give feedback with track change Function. 
+%(4) English editing and layout have been complete, please do not revert the changes.
+ for Identifying Sexism in Social Media: Combining Explainability with Model Prediction}
+
+% MDPI internal command: Title for citation in the left column
+\TitleCitation{A Transparent Pipeline for Identifying Sexism in Social Media: Combining Explainability with Model Prediction}
+
+% Author Orchid ID: enter ID or remove command
+\newcommand{\orcidauthorA}{0000-0003-0860-9200} % Add \orcidA{} behind the author's name
+\newcommand{\orcidauthorB}{0000-0002-7601-8667} % Add \orcidB{} behind the author's name
+\newcommand{\orcidauthorC}{0000-0001-6366-2173} % Add \orcidC{} behind the author's name
+
+% Authors, for the paper (add full first names)
+\Author{\hl{Hadi Mohammadi \orcidA{},} %MDPI: 1. Please carefully check the accuracy of names and affiliations; 2. We merged three affs since they are the same (as well as aff number), please confirm. 3. Please note that authorship cannot be changed after the manuscript has been accepted, and all information should be consistent with authorship document. (Including changes in the number of authors, corresponding authors, and affiliations, etc.). Thank you.
+~Anastasia Giachanou *\orcidB{} and Ayoub Bagheri \orcidC{}}
+
+
+% MDPI internal command: Authors, for metadata in PDF
+\AuthorNames{Hadi Mohammadi, Anastasia Giachanou and Ayoub Bagheri}
+
+% MDPI internal command: Authors, for citation in the left column
+\AuthorCitation{\highlighting{Mohammadi,}%MDPI:Please check all author names carefully.
+~H.; Giachanou, A.; Bagheri, A.}
+% If this is a Chicago style journal: Lastname, Firstname, Firstname Lastname, and Firstname Lastname.
+
+% Affiliations / Addresses (Add [1] after \address if there is only one affiliation.)
+\address[1]{%
+Department of Methodology and Statistics, Utrecht University, \hl{3584 CS Utrecht, The Netherlands;} %MDPI: Newly added information. Please confirm.
+~h.mohammadi@uu.nl (H.M.); a.bagheri@uu.nl (A.B.)\\
+%$^{2}$ \quad Department of Methodology and Statistics, Utrecht University; a.giachanou@uu.nl\\
+%$^{3}$ \quad Department of Methodology and Statistics, Utrecht University; 
+}
+
+% Contact information of the corresponding author
+\corres{\hangafter=1 \hangindent=1.05em \hspace{-0.82em}  Correspondence: a.giachanou@uu.nl}
+
+% Current address and/or shared authorship
+%\firstnote{Current address: Affiliation 3.} 
+%\secondnote{These authors contributed equally to this work.}
+% The commands \thirdnote{} till \eighthnote{} are available for further notes
+
+%\simplesumm{} % Simple summary
+
+%\conference{} % An extended version of a conference paper
+
+% Abstract (Do not insert blank lines, i.e., \\) 
+
+\featuredapplication{\highlighting{{\textbf{We}}}%MDPI: 1. We removed `Content Warning:', please check if the content in this part is correct; 2. We removed all red color on words in whole paper, please confirm.
+~\textbf{show illustrative examples of sexist language to describe the taxonomy and explainability analysis.}}
+
+
+\abstract{In this study, we present a new approach that combines multiple Bidirectional Encoder Representations from Transformers (BERT) architectures with a Convolutional Neural Network (CNN) framework designed for sexism detection in text at a granular level. Our method relies on the analysis and identification of the most important terms contributing to sexist content using Shapley Additive Explanations (SHAP) values. This approach involves defining a range of Sexism Scores based on both model predictions and explainability, moving beyond binary classification to provide a deeper understanding of the sexism-detection process. Additionally, it enables us to identify specific parts of a sentence and their respective contributions to this range, which can be valuable for decision makers and future research. In conclusion, this study introduces an innovative method for enhancing the clarity of large language models (LLMs), which is particularly relevant in sensitive domains such as sexism detection. The incorporation of explainability into the model represents a significant advancement in this field. The objective of our study is to bridge the gap between advanced technology and human comprehension by providing a framework for creating AI models that are both efficient and transparent. This approach could serve as a pipeline for future studies to incorporate explainability into language models.
+}
+
+% Keywords
+\keyword{sexism detection; explainable AI (XAI); ensemble model; Shapley values; large \linebreak language models (LLMs); natural language processing (NLP)} 
+
+
+% The fields PACS, MSC, and JEL may be left empty or commented out if not applicable
+%\PACS{J0101}
+%\MSC{}
+%\JEL{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Diversity
+%\LSID{\url{http://}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Applied Sciences
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Data
+%\dataset{DOI number or link to the deposited data set if the data set is published separately. If the data set shall be published as a supplement to this paper, this field will be filled by the journal editors. In this case, please submit the data set as a supplement.}
+%\datasetlicense{License under which the data set is made available (CC0, CC-BY, CC-BY-SA, CC-BY-NC, etc.)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Toxins
+%\keycontribution{The breakthroughs or highlights of the manuscript. Authors can write one or two sentences to describe the most important part of the paper.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Encyclopedia
+%\encyclopediadef{For entry manuscripts only: please provide a brief overview of the entry title instead of an abstract.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Advances in Respiratory Medicine
+%\addhighlights{yes}
+%\renewcommand{\addhighlights}{%
+
+%\noindent This is an obligatory section in “Advances in Respiratory Medicine”, whose goal is to increase the discoverability and readability of the article via search engines and other scholars. Highlights should not be a copy of the abstract, but a simple text allowing the reader to quickly and simplified find out what the article is about and what can be cited from it. Each of these parts should be devoted up to 2~bullet points.\vspace{3pt}\\
+%\textbf{What are the main findings?}
+% \begin{itemize}[labelsep=2.5mm,topsep=-3pt]
+% \item First bullet.
+% \item Second bullet.
+% \end{itemize}\vspace{3pt}
+%\textbf{What is the implication of the main finding?}
+% \begin{itemize}[labelsep=2.5mm,topsep=-3pt]
+% \item First bullet.
+% \item Second bullet.
+% \end{itemize}
+%}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Introduction}
+\label{sec:Introduction}
+
+\hl{The} %MDPI: Please notice that:
+%1. All mentioned equipment and tools need to have manufacturer and its location informations.
+%2.All mentioned softwares need to have version number
+ digital age has significantly transformed communication, especially with the emergence of online platforms facilitating real-time interactions. Although social media platforms can be a useful tool for instant communication, they also facilitate the sharing of harmful content, such as hate speech and sexist comments. According \mbox{to~\citet{kurasawa2021evidentiary}}, gender-based online violence (GBOV) involves digital forms of harassment and abuse targeted at women, providing a significant challenge to maintaining safe and respectful digital environments. Content regulations on these platforms~\cite{papaevangelou2023non}, within the framework of the European Union’s Digital Services Act, highlight the challenge of effectively managing harmful content. The increasing rate of online sexism poses a serious threat to women’s mental health~\cite{ortiz2023if}. This challenge is {worsened} by social media platforms, where sexist ideologies can {spread} rapidly, leading to an increase in sexist comments~\cite{aldana2021language}.
+
+Recognizing and addressing sexism in online spaces is crucial for advancing gender equality, as emphasized by~\citet{lee2022affordances} in their study on the role of online forums in movement dynamics and communication. Creating a safe digital space is about more than just protecting individuals from gender-based harm; it is also about creating an environment where gender equality is possible. Identifying sexist content, on the other hand, is a challenging task. The sensitive and context-dependent nature of language {presents} challenges for accurately distinguishing between sexist and non-sexist content, as {shown} by~\citet{feng2021simple} in their development of a voting mechanism for identifying online sexist content. While studies such as~\citet{schutz2106automatic} and~\citet{ortiz2023if} have extensively studied the detection of online sexism in various contexts, including in non-English ones, these models often rely on a binary sexist/non-sexist classification~\cite{kumar2021sexism, de2021sexism, altin2021automatic}. 
+
+To the best of our knowledge, no study has addressed the problem of sexism detection as a regression task. It is essential to  address this gap 
+ for a thorough analysis that can effectively moderate content. Treating sexism detection as a regression task within a continuous range  allows users and platform moderators to {assess} the intensity of sexism, recognizing that not all posts cause the same level of harm. This approach provides a more nuanced and detailed understanding than a binary classification, emphasizing the varying degrees of impact. Also integrating explainable AI (XAI) techniques in sexism detection as shown by~\citet{mehta2022social} and~\citet{gil2021adolescents} can provide deeper insights into the rationale behind these classifications, thereby enhancing the transparency and trustworthiness of the models. This knowledge is essential for ensuring responsible and transparent content management on social media, particularly because these models often function as black boxes, making the integration of explainability crucial. The challenge {exists} in overcoming people's reluctance to trust machine-based decisions, which often {arises} from their lack of understanding of how these decisions are made. Even though these models may achieve high performance, their decisions need to be reviewed to ensure that users are not {unfairly} blocked and to minimize false negatives, especially given the sensitivity of gender discrimination issues. The European Union's General Data Protection Regulation (GDPR), emphasizing a ``right to explanation'' as highlighted \mbox{by~\citet{hoofnagle2019european}}, underscores the need for clarity and transparency in these models, as argued by~\citet{mathew2021hatexplain}.  A more detailed classification of sexist content allows policymakers to address online sexism with greater precision, reducing gender-based harm. This granular detection should be distinguished from explainability, as each serves a different but complementary purpose in managing online content.
+
+While automated detection tools are crucial in identifying complex social issues such as sexism, recent models such as transformers function as black boxes, offering little to no insight into the reasoning behind their classifications. As highlighted in the review by~\citet{velankar2022review}, and the analysis of online content challenges by~\citet{jiang2020identifying}, while the lack of transparency in these models does not necessarily {affect} their accuracy in detecting sexist content, the `black box' nature of these models makes it difficult to understand their rationale and identify potential errors. This lack of transparency and explainability can lead to mistrust from users, which in turn might reduce their willingness to engage with or rely on the system, thereby undermining its overall effectiveness in detecting online sexism.
+
+The need to understand the decision process of the models has led to the development of various techniques to make these models more interpretable, as highlighted in recent surveys on the state of explainable natural language processing (XNLP) tasks~\cite{danilevsky2020survey, sogaard2021explainable}. XNLP offers an exciting response to the challenges of interpretability and trust in the context of online harm detection, including sexism detection. XNLP enables users to understand and critically evaluate the outcomes of automated detection systems by providing insights into the decision-making process of AI models. This is particularly important in sensitive fields like the detection of sexism, where the importance of false positives or negatives {exceeds} simple errors. In this scenario, a false negative (failure to identify a sexist comment) poses the risk of overlooking harmful behavior, whereas a false positive (incorrectly labeling a statement as sexist) may wrongly implicate individuals or content. These errors carry significant ethical and {social consequences}, in addition to being crucial from a data accuracy~perspective.
+
+Our research proposes the application of the  XNLP technique to detect and understand sexism in social media posts. By prioritizing explainability, we aim to {clarify} the decision-making processes of algorithms, particularly when dealing with large language models (LLMs). Some researchers have tackled the problem of detecting sexist text using ensemble models, as shown by~\citet{mohammadi2023towards} in their study on ensembling transformer models for identifying online sexism. Their approach combines multiple transformer models to improve detection accuracy. We also propose an ensemble method for this task; however, our method incorporates explainability techniques such as SHAP values to provide insights into the decision-making process of each model, offering a more transparent and interpretable solution compared to the previous work. The ensemble approach has advantages because it combines predictions from multiple pre-trained models, such as Bidirectional Encoder Representations from Transformers (BERT) and DistilBERT, enhancing the overall performance of the system. In summary, our study aims to contribute to the growing body of research on sexism detection by providing a novel ensemble approach that integrates technical accuracy with explainability.
+
+
+The remainder of this paper is organized as follows: we start with a review of the most relevant works in~\highlighting{Section \ref{sec:related-Work}.}%MDPI: Please confirm this modification. Same as below.
+~Then, we describe the data and our methodology in Section~\ref{sec:methodology},
+~which includes the data analysis, data preparation, and augmentation, and our ensemble model design; we then introduce our approach  about explainability analysis in  Section~\ref{sec:explain}. Subsequently, we discuss experimentation and results in Section~\ref{sec:result}, covering the hyperparameter tuning of the model and training progress, along with several examples of how explainability impacts the performance metrics. The paper concludes with the discussion, conclusion, and future work in Section~\ref{sec:conclusion}.
+
+\section{Related Work}
+\label{sec:related-Work}
+
+The detection of online sexism has received much attention in recent years. Some approaches have relied on machine learning algorithms and hand-crafted features to determine whether text is sexist or not~\cite{bock2023ait_fhstp, daouadi2023deep}. These methods, however, often do not capture the context that is crucial for such a complex task.~\citet{lopez2021combining} proposed integrating transformer-based models with traditional machine learning approaches for detecting sexism in social networks, highlighting the dynamic nature of these methodologies. The quality and diversity of datasets, whether exclusively in English or multilingual, can {create} challenges that may affect the {applicability} of the results. This issue is addressed further by~\citet{samory2021call}, who study sexism detection using psychological factors and adversarial samples to improve dataset annotation for more reliable sexism-detection~methods.
+
+Significant improvements in detecting online sexism have been made in recent \linebreak years~\cite{Rodríguez‐Sánchez2020Automatic, Jha2017When}. This investigation has extended beyond English, as evidenced by the work of researchers ~\citet{mohammadi2023towards},~\citet{jiang2022swsr}, and~\citet{de2021sexism}, who applied LLMs to datasets in multiple languages. Despite these advancements, a common issue persists: all of these studies focus on a binary classification—sexist or not sexist—without delving into the underlying rationale behind why certain texts are perceived to contain sexist content.~\citet{das2023online} presented a method for addressing this limitation by combining user gender information with textual features, which improves classification performance over the typical binary categorization. \textls[-15]{Furthermore, this need led to competitions such as Explainable Detection of Online Sexism (\url{https://codalab.lisn.upsaclay.fr/competitions/7124}, \highlighting{(accessed on 1 September 2022)),}}%MDPI: 1. This article is not allowed footnote, so we moved into main, please confirm; 2. Please add the access date (format: Date Month Year), e.g., accessed on 1 January 2020. Date of last access should be befeore paper received date which is 20 August 2024. Same as highlighting as following.
+~which attempted to address this issue through supervisors in more detailed categories~\cite{kirkSemEval2023}. ~\citet{tasneem2023kingsmantrio},~\citet{kiritchenko2021confronting}, and~\mbox{\citet{lamsiyah2023ul}} have investigated the effectiveness of transfer learning models for explainable online sexism detection, the ethical and human rights perspective in confronting online abuse, and semi-supervised multi-task learning for explainable online sexism detection, respectively.
+
+Recent advances in natural language processing (NLP) and machine learning have provided opportunities for more effective detection of online sexism. Deep learning, context-aware algorithms, and lexicon-based sentiment analysis have been employed to enhance the discernment of the nuances in sexist language. For instance, the utilization of BERT for sentiment analysis within textual data~\cite{kotapati2023natural}, alongside the refinement of sentiment-analysis methodologies to incorporate finer details, exemplifies notable advancements within this domain~\cite{chauhan2023fine}.
+
+Furthermore, the introduction of sentimental and context-aware recurrent convolutional neural network (CNN) highlights advancements in handling complex language structures~\cite{mariappan2023sentiment}. However, these methods face challenges, particularly in dealing with ambiguous or indirect expressions of sexism. Furthermore, it is {crucial} to address the issue of bias in the training data utilized to train such models, as it can significantly influence their performance and reliability.
+
+The usage of techniques such as Shapley Additive Explanations (SHAP)~\cite{lundberg2017unified} and Local Interpretable Model-agnostic Explanations (LIME)~\cite{ribeiro2016should} has increased the popularity of explainability in AI, especially in NLP. These methods enable more transparency and understanding of model predictions by offering insights into the machine learning models’ decision-making process. To provide  more detailed knowledge of how specific features affect model output, SHAP has been used, for example, to interpret complicated NLP models. Also, LIME has played a crucial role in clarifying the logic underlying specific forecasts, facilitating comprehension and confidence in AI judgments.
+
+Studies that emphasize the importance of human--AI collaboration show that the role of human involvement in AI-driven content filtering has grown in popularity. For example,~\citet{lai2022human} and~\citet{molina2022ai} show how human oversight can drastically minimize errors in AI moderation systems. Furthermore, the~\mbox{\citet{rallabandi2023ethical}} study emphasizes the significance of balancing human moderation with algorithmic action in content moderation, especially in sensitive areas such as online harm detection.
+
+Our study combines explainability with the power of transformer-based models to advance the field of sexism detection. In contrast to the previous studies that focused on performance, our approach emphasises   comprehending the decision process in sexism detection. This enables us to not only detect sexism in various forms but also to provide clear explanations for these classifications.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\section{Methodology}
+\section{Materials And Methods}
+\label{sec:methodology}
+
+\subsection{Data}
+
+For our study, we utilized the data by SemEval Task 10~\cite{kirkSemEval2023}, which includes labeled datasets from Gab and Reddit (\url{https://github.com/rewire-online/edos} \highlighting{(accessed on)).} Gab is recognized as a social networking platform {supporting} free speech and harboring a diverse user base, thereby hosting content spanning a wide {range}. Conversely, Reddit serves as a network of communities wherein individuals engage with topics aligning with their interests, hobbies, and passions. The labeled dataset consists of 14,000 posts. The tasks include a binary classifier for categorizing posts as sexist or non-sexist (Subtask A), a four-class classification system for sexist posts (Subtask B), and an 11-class system for more specific labels of sexism (Subtask C). These subtasks ensure that texts labeled as sexist are given specific reasons for the classification. The overview of tasks and datasets is shown in Table~\ref{tab:task}.
+
+\begin{table}[H]
+%\centering
+\small
+\renewcommand{\arraystretch}{0.92}
+
+\caption{\hl{Data} %MDPI: Please DO NOT change any data in tables or replace into new tables during proofreading stage since paper has been accepted.
+ summary. The total number of records in each task is \textbf{bolded}.}
+ \label{tab:task} \setlength{\tabcolsep}{17.5mm}
+\begin{tabular}{ll}
+\toprule
+\textbf{ Category} & \textbf{ Records} \\
+\midrule
+\multicolumn{2}{c}{ \hl{\textbf{Task\,A}}} %MDPI: Please add an explanation for bold in the table footer. If the bold is unnecessary, please remove it. The following highlights are the same.
+ \\
+ Not sexist &  \hl{10,602}%MDPI: We added comma for over four digits, please confirm. Same highlighting as following.
+  \\
+ Sexist &   3398\\
+\hl{\textbf{ Total}} &\hl{ \textbf{ 14,000}} \\
+\midrule
+\multicolumn{2}{c}{ \hl{\textbf{Task\,B}}} \\
+ 1. Threats, plans to harm, and incitement &  310 \\
+ 2. Derogation &  1590\\
+ 3. Animosity &  1165\\
+ 4. Prejudiced discussion & 333\\
+\hl{\textbf{ Total}} & \hl{\textbf{ 3398}}\\
+%\midrule
+
+
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]\ContinuedFloat
+\renewcommand{\arraystretch}{1.2}
+\small
+ \setlength{\tabcolsep}{8.5mm}
+\caption{{\em Cont.}}
+\begin{tabular}{ll}
+\toprule
+\textbf{ Category} & \textbf{ Records} \\
+\midrule
+
+
+\multicolumn{2}{c}{ \hl{\textbf{Task\,C}}} \\
+ 1.1 Threats of harm &  56\\
+ 1.2 Incitement and encouragement of harm &  254\\
+ 2.1 Descriptive attacks &  717\\
+ 2.2 Aggressive and emotive attacks &  673\\
+ 2.3 Dehumanising attacks and overt sexual objectification &  200\\
+ 3.1 Casual use of gendered slurs, profanities, and insults &  637\\
+ 3.2 Immutable gender differences and gender stereotypes &  417\\
+ 3.3 Backhanded gendered compliments &  64\\
+ 3.4 Condescending explanations or unwelcome advice &  47\\
+ 4.1 Supporting mistreatment of individual women &  75\\
+ 4.2 Supporting systemic discrimination against women as a group &  258\\
+\hl{\textbf{ Total}} & \hl{\textbf{ 3398}}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Data Preparation and Augmentation}
+
+The first step in the data-preparation process was to convert all of the text to lowercase so that the analysis could recognize words uniformly. Additionally we removed URLs, special characters and punctuation. Then, we applied tokenization and lemmatization to divide the text into units.
+
+We applied various augmentation strategies due to limited data availability in certain classes and the necessity to develop more robust models. Using techniques like `random deletion' to remove random words trained the model to understand incomplete data, and techniques such as `synonym replacement' for word and phrase replacement expanded the model’s understanding of context. Different spellings were also used to simulate errors found in the real world. The dataset was significantly imbalanced, particularly in Task A, where 76\% of the training data was `Not sexist' (10,602 instances) and only 24\% was `Sexist' (3398 instances). This imbalance was similarly reflected in the test data and persisted across Task B and Task C categories. For example, some classes in Task C, like `Threats of harm', had only 56 training instances, representing a mere 2\% of the data. The training dataset contained 14,000 records. After augmentation, this number increased to 42,000 records, significantly enhancing the data volume available for training.
+
+To further address the class imbalance, we used back translation to increase the number of `sexist' texts. This means we first translated the `sexist' texts into Dutch and then back into English. Dutch was selected for this purpose based on previous research indicating its efficacy for such tasks and due to its linguistic similarity to English, as both languages belong to the West Germanic language family~\cite{beddiar2021data}. Figure~\ref{fig:back} illustrates an example of our back translation augmentation approach.\vspace{-9pt}
+
+%Figure 4. Back transation
+\begin{figure}[H] % H specifier enforces the position
+%\centering
+\includegraphics[width=1\textwidth]{Plots/backtranslation.pdf} 
+\caption{\hl{Back} %MDPI: Please DO NOT change any data in figures or replace into new figures during proofreading stage since paper has been accepted.
+ translation method for data augmentation (English $\leftrightarrow$ Dutch).} 
+\label{fig:back}
+\end{figure}
+
+\textls[-15]{To further address the class imbalance, we used some other techniques like stratified K-fold cross-validation (\url{https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedKFold.html}, \highlighting{(accessed on))} method to ensure an accurate class distribution throughout the data segments. Strategies including RandomOverSampler, SMOTE (\url{https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTE.html}}, \linebreak \highlighting{(accessed on)),} and differential class weighting were used during training to address the class imbalance~\cite{zheng2015oversampling}.
+
+\subsection{Methodology}
+
+In this study, we propose a novel methodology that uses explainability to define a Sexism Score, which can lead to more specific results and identifification. This approach is structured into two parts, where the various phases are shown in Figure~\ref{fig:methodology}.\vspace{-3pt}
+
+\begin{figure}[H]
+%\centering
+\includegraphics[width=0.95\textwidth]{Plots/methodology.pdf}
+\caption{{Research methodology.}}
+\label{fig:methodology}
+\end{figure}
+
+As illustrated in Figure~\ref{fig:methodology}, the first part focuses on the sexism detection and starts with dataset analysis. This phase is followed by preprocessing and data augmentation. Then we develop an ensemble model by combining various versions of BERT with a CNN architecture (detailed in Section~\ref{sec:modeling}).
+
+In the second part of our methodology, we generate SHAP values to identify the most influential tokens in the model’s decision-making process~\cite{lundberg2017unified} and we integrate the explainability scores into model prediction to define the Sexism Score, which we elaborate more on in \highlighting{Section~\ref{sec:explain}.}
+
+
+\subsection{\highlighting{{CustomBERT}}%MDPI: Please confirm if the bold is unnecessary and can be removed. The following highlights are the same.
+---Ensemble Model Design}
+\label{sec:modeling}
+
+We developed the CustomBERT model, which combines different BERT versions and a CNN, inspired by the way CNNs recognize similarities in images, as investigated by~\citet{xu2021limits}. {This approach is motivated by the need to capture diverse linguistic patterns from different transformer models. Each BERT variant offers distinct strengths: BERT multilingual excels in handling various aspect of language, XLM-RoBERTa is particularly adept at cross tasks, and DistilBERT provides efficiency with minimal loss in performance. By using these models, our ensemble aims to capture a wider range of semantic features.} This method identifies similarities between various pre-trained transformer models using text input, similar to how CNNs identify similarities in images. {The combination of transformer models and CNN introduces additional layers of representation learning, allowing the system to extract more nuanced textual features that a single model might miss.} Figure~\ref{fig:model} shows the detailed architecture of our approach.\vspace{-5pt}
+
+\begin{figure}[H]
+%\centering
+\includegraphics[width=0.7\textwidth]{Plots/model.pdf}
+\caption{Architecture of our CustomBERT model.}
+\label{fig:model}
+\end{figure}
+
+By using the advantages of various transformer models, this structure aims to provide an improved and flexible {method} to evaluate new text. We used BERT’s bidirectional nature to fully understand the context of words in sentences~\cite{devlin2018bert}. After the pre-trained model processes the input, its output undergoes two subsequent processes. First, we perform concatenation by merging the outputs from the pre-trained model. Then, we pass this concatenated input through a CNN layer, which is designed to identify important features from both the text data and the token scores. {CNN is chosen here to effectively capture local dependencies in the concatenated transformer outputs, enabling the model to recognize intricate relationships within the text that are critical for tasks like sexism detection.} The pseudocode of Algorithm~\ref{alg:ensemble-model} is as follows:
+
+\vspace{3pt}
+\begin{algorithm}[H]
+\renewcommand{\arraystretch}{0.92}
+\fontsize{9pt}{10pt}\selectfont\caption{\fontsize{9pt}{10pt}\selectfont CustomBERT model for sexism detection.}\label{alg:ensemble-model}
+\begin{algorithmic}[1]
+
+\Require Input sentence
+\Ensure Output classes
+
+\Function{Pre-train Language Models}{$sentence$}
+    \State $bert\_output \gets \text{BERT Model}(\textit{sentence})$
+    %\Comment{Output from BERT}
+    \State $xlmroberta\_output \gets \text{XLMRoBERTa Model}(\textit{sentence})$
+    %\Comment{Output from XLM-RoBERTa}
+    \State $distilbert\_output \gets \text{DistilBERT Model}(\textit{sentence})$
+    %\Comment{Output from DistilBERT}
+    %\State $token\_scores \gets \text{Token Score Vector}(\textit{sentence})$
+    \State \Return $bert\_output, xlmroberta\_output, distilbert\_output$
+\EndFunction
+
+\Function{CustomBERT}{$tokens$}
+    \State $bert\_output, xlmroberta\_output, distilbert\_output \gets$
+    \State \hspace{\algorithmicindent} $\Call{Pre-train Language Models Outputs}{sentence}$
+    \State $concatenated\_outputs \gets \text{concatenate}(bert\_output, xlmroberta\_output, distilbert\_output)$
+    %\State $combined\_input \gets \text{concatenate}(concatenated\_outputs, token\_scores)$
+    \State $cnn\_output \gets \text{{apply Conv1D layer, filters=64, kernel=3, activation='relu'}(concatenated\_}$ \linebreak $\text{outputs)}$
+    \State $flattened\_cnn\_output \gets \text{flatten}(cnn\_output)$
+    \State $output \gets \text{apply Dense layer with 1 unit, activation='sigmoid'}(flattened\_cnn\_output)$
+    \State \Return $class$
+\EndFunction
+
+\State \textbf{final output} $\gets \Call{CustomBERT}{\textit{input sentence}}$
+\end{algorithmic}
+\end{algorithm}
+
+
+
+As shown in Algorithm~\ref{alg:ensemble-model}, the CustomBERT model combines the outputs of various pre-trained transformer models with token scores before classification. It consists of \highlighting{BERT multilingual} %MDPI: Please confirm if the italics is unnecessary and can be removed. The following highlights are the same.
+~\cite{devlin2018bert}, \highlighting{XLM-RoBERTa}~\cite{conneau2019unsupervised}, and \highlighting{DistilBERT}, a smaller but efficient version of BERT~\cite{sanh2019distilbert}. {The main task for these transformer models is to encode the input sentence into a dense vector representation, capturing contextualized meaning and semantic nuances.} We combine the outputs from each transformer model {by concatenating their vector representations, which are then processed further through a convolutional neural network (CNN)} and process them through a Conv1D layer (\url{https://keras.io/api/layers/convolution_layers/convolution1d/},  \highlighting{(accessed on)),} followed by MaxPooling1D (\url{https://www.tensorflow.org/api_docs/python/tf/keras/layers/MaxPooling1D},  \highlighting{(accessed on))} and a flattening step. This preprocessing stage primes the data for subsequent dense layers, using binary and multiclass classification across diverse tasks.
+
+
+\subsection{Explainability Analysis}
+\label{sec:explain}
+
+In this section, we introduce the symbols and parameters used throughout our explainability methodology, followed by a detailed description of the techniques applied. The Definitions of  of symbols and parameters that are used in this section is show in Table~\ref{tab:symbols}.
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.2}
+\small%\fontsize{9pt}{10pt}\selectfont%\centering
+\caption{\hl{Definitions} %MDPI: 1. Please check if this table should be moved into Abbreviations part; 2. Please CITE the table in the text and ensure that the first citation of each table appears in numerical order.
+ of symbols and parameters.} \label{tab:symbols} \setlength{\tabcolsep}{5.5mm}
+
+\begin{tabular}{ll}
+\toprule
+
+\textbf{\fontsize{9pt}{10pt}\selectfont Symbol} & \textbf{\fontsize{9pt}{10pt}\selectfont Description} \\
+\midrule
+$t$ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~& Token in the sentences \\
+$S_t$ & SHAP value for token $t$ \\
+$T$ & Set of all tokens \\
+%$n$ & Subset of tokens excluding $i$ \\
+%$f(n \cup \{t\})$ & Model prediction with the token $t$ included \\
+$f(t)$ & Model prediction without the token $t$ \\
+$\text{SI}_t$ & SHAP Importance for token $t$ \\
+$N_t$ & Number of sentences in which token $t$ appears \\
+$S_t(i)$ & SHAP value for token $t$ in the $i$-th sentence \\
+$\mu$ & Mean of the SHAP scores \\
+$\sigma$ & Standard deviation of the SHAP scores \\
+$\text{IR}_t$ & Importance Ratio for token $t$ \\
+$\text{CI}_k$ & Cumulative Importance up to the $k$-th token \\
+$T_c$ & Threshold for cumulative importance, set to 0.95 \\
+$\text{Label}(i)$ & Modified predicted hard label indicator for sentence $i$ \\
+$\text{SS}(i)$ & Sexsim Score for sentence $i$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+We utilized SHAP to integrate the explainability component into our methodology. These values are instrumental in understanding the contribution of each token to the model’s predictions. SHAP generates scores indicative of the importance of a token in the prediction~\cite{lundberg2017unified}. SHAP values are based on cooperative game theory and provide a method to attribute the output of the model to its input features. The application of SHAP values allows us to identify the key factors influencing the classification process. By analyzing these values, we can assign scores to the most influential tokens based on their perceived impact, leading to a better understanding of the textual content.
+
+
+The SHAP value for each token is calculated as follows: let \(S_t\) denote the SHAP value for token \(t\), \(T\) be the set of all tokens, \(T \setminus \{t\}\) be a subset of tokens excluding \(t\), and \(f(T \setminus \{t\} \cup \{t\})\) and \(f(T \setminus \{t\})\) be the model predictions with and without the token \(t\), respectively. The SHAP value \(S_t\) is computed as:
+\begin{equation}
+\label{eq:shap}
+%\[
+S_t = \sum_{T \setminus \{t\} \subseteq T} \frac{|T \setminus \{t\}|! (|T| - |T \setminus \{t\}| - 1)!}{|T|!} \left[ f(T \setminus \{t\} \cup \{t\}) - f(T \setminus \{t\}) \right]
+%\]
+\end{equation}
+
+Here, the term \(\frac{|T \setminus \{t\}|! (|T| - |T \setminus \{t\}| - 1)!}{|T|!}\) represents the weight assigned to the difference in model outputs, ensuring that the contribution of token \(t\) is fairly distributed among all possible combinations of tokens. This weight is derived from the concept of Shapley values in cooperative game theory, which ensures a fair distribution of the total gain (or loss) among all contributors.
+
+
+To determine the most influential tokens based on SHAP values, we first calculate the SHAP importance for each token \(t\) across all samples where the token appears in the set of all tokens \(T\) in the sentences from \(i = 1\) to \(N_t\), which represent all sentences in the dataset. \(S_i(t)\) represents the SHAP value for token \(t\) in the \(i\)-th sentence. The SHAP importance for token \(t\), denoted as \(\text{SI}_t\), is computed as:
+\begin{equation}
+\label{eq:average_shap}
+\text{SI}_t = \frac{1}{N_t} \sum_{i=1}^{N_t} | S_t(i) | \cdot \mathbb{I}(y_i = \hat{y}_i)
+\end{equation}
+
+In this formula, \(N_t\) is the number of sentences in which token \(t\) appears, and \(S_t(i)\) is the SHAP value for token \(t\) in the \(i\)-th sentence. The term \(\mathbb{I}(y_i = \hat{y}_i)\) is an indicator function that equals 1 if the predicted class \(\hat{y}_i\) matches the true class \(y_i\), and 0 otherwise. This ensures that we only consider SHAP values from sentences where the model's prediction is correct, thereby focusing on the tokens that truly influence accurate predictions.
+
+We remove data points that fall outside 99.7\% of the SHAP value distribution to exclude outliers. This step ensures that our analysis focuses on the most representative data. Specifically, we filter the SHAP scores \(s\) to satisfy the following condition: where
+\hl{$-$}%MDPI: We changed hyphen into minus sign, please confirm. Same as below.
+\(\mu\) \hl{is the mean of the SHAP scores, }%please confirm
+\hl{$-$}\(\sigma\) is the standard deviation of the SHAP scores.
+\begin{equation}
+\label{eq:shap_filter}
+\mu - 3\sigma \leq s \leq \mu + 3\sigma
+\end{equation}
+
+ After filtering outliers, we normalize the remaining SHAP values to derive the importance ratio for each token. The importance ratio for token \(t\) is defined as:
+\begin{equation}
+\label{eq:importance_ratio}
+\text{IR}_t = \frac{\text{SI}_t}{\sum_{k \in T} \text{SI}_k}
+\end{equation}
+
+This step converts the SHAP values into a proportional format, where each ratio represents the token's share of the total impact on the model. Following the normalization, we calculate the cumulative importance of the tokens. Let \(K\) be the total number of tokens sorted by descending importance, and \(\text{IR}_i\) be the importance ratio of the \(i\)-th token. The cumulative importance is given by:
+\begin{equation}
+\label{eq:cumulative_importance}
+\text{CI}_k = \sum_{i=1}^{k} \text{IR}_i \quad \text{such that} \quad \text{CI}_k \leq T_c
+\end{equation}
+
+We establish a threshold, \(T_c = 0.95\), to select tokens based on their importance. Tokens are selected such that their cumulative importance is less than or equal to the threshold \(T_c\), focusing on those that contribute to the first 95\% of total SHAP importance.
+
+The selected tokens are then employed to calculate a `Sexism Score' for each text entry in our dataset. This score combines the SHAP scores with a modified predicted hard label. The hard \text{Label}(i) is changed to -1 for 'No' labels and 1 for 'Yes' labels.
+\begin{equation}
+\label{eq:label}
+\text{Label}(i) = \begin{cases} 
+1 & \text{if prediction} = \text{YES} \\ 
+-1 & \text{if prediction} = \text{NO} 
+\end{cases}
+\end{equation}
+
+Let \(\text{SS}(i)\) be the Sexism Score for sentence \(i\) derived from the summed absolute SHAP values of the selected tokens, and \text{Label}(i) be the modified label indicator. The Sexism Score for sentence \(i\) is calculated as follows:
+
+
+\newpage
+\begin{equation}
+\label{eq:sexism_score}
+\text{SS}(i) = \sum_{i \in N_i} \text{SI}_t(i) \times \text{Label}(i)
+\end{equation}
+
+After calculating the Sexism Scores for the training dataset, we proceed to evaluate the test dataset. For each sentence in the test dataset, we utilize the trained model to generate predictions. Using the SHAP scores computed during the training phase, we calculate the Sexism Score for each sentence in the test dataset. This is achieved by summing the  SHAP values of the selected effective tokens based on   Table~\ref{tab:effectivetokens}.
+
+Subsequently, we categorize the test dataset into different bins based on the calculated Sexism Scores. This binning allows us to compare the model's performance across varying levels of detected sexism. By analyzing the model's predictive accuracy and other performance metrics within these bins, we can know how well the model generalizes to new data, particularly in identifying and handling sexist content. The overall steps of test dataset evaluation and performance comparison are shown below:
+
+\begin{enumerate}
+    \item \hl{Model\,Prediction\,on\,Test\,Dataset:} %MDPI: Please confirm if the bold is unnecessary and can be removed. The following highlights are the same.
+~For each sentence \(i\) in the test dataset, use the trained model to generate predictions \(\hat{y}_i^{\text{test}}\).
+
+    \item \hl{Sexism\,Score\,Calculation\,for\,Test\,Dataset:} Calculate the Sexism Score \(\text{SS}^{\text{test}}(i)\) for each sentence \(i\) in the test dataset using the SHAP scores from the training dataset. This is achieved as follows:
+        \begin{equation}
+    \text{SS}^{\text{test}}(i) = \sum_{t \in T_i} \text{SI}_t \times \text{Label}(\hat{y}_i^{\text{test}})
+    \end{equation}
+    
+    where \(\text{SI}_t\) are the SHAP importance scores from the training dataset, and \(\text{Label}(\hat{y}_i^{\text{test}})\) is the  predicted label for the test sentence \(i\).
+
+    \item \hl{Binning\,Based\,on\,Sexism\,Scores:} Divide the test dataset into bins based on the calculated Sexism Scores \(\text{SS}^{\text{test}}(i)\). Define bins \(B_k\) such that:
+        \begin{equation}
+    B_k = \{ i \mid \alpha_{k-1} \leq \text{SS}^{\text{test}}(i) < \alpha_k \}
+    \end{equation}
+    
+    where \(\alpha_k\) are the thresholds for the bins.
+
+    \item \hl{\textbf{Performance\,Comparison}:} For each bin \(B_k\), evaluate the model's performance by calculating metrics such as accuracy, precision, recall, and F1 score. Compare these metrics across different bins to assess the model's performance in handling varying levels of detected sexism.
+\end{enumerate}
+
+By following these steps, we can understand the model's effectiveness and robustness in identifying and handling sexist content in the test dataset, highlighting any potential biases or areas for improvement.
+
+\section{Results}
+\label{sec:result}
+
+\subsection{Exploratory Data Analysis (EDA)}
+In this part, we analyze the data by examining the text length distribution, frequency of unique words and n-grams across different categories of sexist texts, and sentiment analysis of common word pairs within each category. We aim to uncover linguistic patterns and characteristics that distinguish sexist texts from non-sexist ones. First, we looked at the relationship between text length and the presence of sexist content. We calculated the text length based on the number of characters in each text, after removing stop words, punctuation, etc. We divided the text length into five ranges, [2--50, 51--100, 101--150, 151--200, 201+], to simplify the analysis. A density distribution of text lengths within each label category (sexist or non-sexist) is shown in Figure~\ref{fig:density}.\vspace{-6pt}
+
+\begin{figure}[H]
+   % \centering
+    \includegraphics[width=0.76\textwidth]{Plots/EDA1.png}
+    \caption{\hl{Density} %MDPI: Please CITE the figure in the text and ensure the first citation of each figure appears in numerical order.
+ distribution of text lengths by sexist label.}\label{fig:density}
+\end{figure}
+
+We used several statistical methods, including logistic regression, chi-square tests, and \emph{t}-tests, to analyze how text length influences sexist labeling. Table~\ref{tab:logistic_regression} show the results from the logistic regression, and Table~\ref{tab:merged_results} show the results from the l chi-square tests, and \emph{t}-tests show that longer texts are more likely to be labelled as sexist; however, the logistic regression results indicate a low R-squared value, near 0.004, suggesting that text length alone is not a strong predictor. More details are shown in Tables~\ref{tab:logistic_regression} and~\ref{tab:merged_results}:  
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.2}
+%\centering
+\caption{{Logistic regression results}.} \label{tab:logistic_regression}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lllllll}
+\toprule
+\textbf{Parameter} & \textbf{Coefficient} & \textbf{Standard Error} & \textbf{z-Value} & \textbf{\emph{p}-Value} & \textbf{95\% Confidence Interval} \\
+\midrule
+Intercept & $-$1.431497 & 0.044 & $-$32.262 & 2.37 $\times 10^{-228}$ & [$-$1.518, $-$1.345] \\
+Text Length & 0.003579 & 0.000 & 7.532 & 4.98 $\times 10^{-14}$ & [0.003, 0.005] \\
+%\midrule
+\multicolumn{6}{l}{Log-Likelihood: $-$7730.043} \\
+\multicolumn{6}{l}{R-Squared: 0.003650} \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+\vspace{-12pt}
+\begin{table}[H]
+%\centering
+\renewcommand{\arraystretch}{1.2}
+\caption{Chi-Square and T-test results.} \label{tab:merged_results} \setlength{\tabcolsep}{5.3mm}
+\begin{tabular}{lll}
+\toprule
+
+\textbf{\ Statistic} & \textbf{\ Value} & \\
+\midrule
+\ Chi2 Statistic & \ 65.703 & \\
+\ \emph{p}-Value & \ 1.83 $\times 10^{-13}$ & \\
+\ Degrees of Freedom ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~& \ 4 & \\
+\midrule
+\ T-Statistic & \ 7.562 & \\
+\ \emph{p}-Value & \ 4.21 $\times 10^{-14}$ & \\
+\ Mean Text Length (Sexist) &  64.83 & \\
+\ Mean Text Length (Non-Sexist) &  58.29 & \\
+\ Standard Deviation (Sexist) &  51.41 & \\
+\ Standard Deviation (Non-Sexist) & \ 50.77 & \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+Based on the results above, with a \emph{p}-value of $4.98 \times 10^{-14}$, $1.83 \times 10^{-13}$, and \linebreak $4.21 \times 10^{-14}$ for logistic regression, chi-square test, and t-test,  respectively, it is evident that text length is a significant factor in determining whether a text is labeled as sexist. All three tests consistently indicate a strong and statistically significant relationship between text length and sexist labeling. 
+
+
+\newpage
+To further analyze the linguistic features of sexist content, we intend to understand the typical language used in it. We implemented n-gram analysis to identify common bigrams and unique words in sexist texts. Figures~\ref{fig:words} and ~\ref{fig:bigrams} show the top 20 unique words and bigrams in sexist texts.\vspace{-5pt}
+
+\begin{figure}[H]
+  %  \centering
+    \includegraphics[width=0.8\textwidth]{Plots/EDA2.png}
+    \caption{Top 20 unique words in sexist texts.}
+    \label{fig:words}
+\end{figure}
+
+\vspace{-9pt}
+\begin{figure}[H]
+    %\centering
+    \includegraphics[width=0.8\textwidth]{Plots/EDA3.png}
+    \caption{Top 20 bigrams in sexist texts.}
+    \label{fig:bigrams}
+\end{figure}
+
+As we can see in Figures~\ref{fig:words} and~\ref{fig:bigrams}, the word `women' was the most frequently occurring word in sexist texts, highlighting the targeted nature of these texts. We also notice that some words indicate aggressive and derogatory language. The sexist text is categorized into 4 main categories including `threats, plans to harm, and incitement', `derogation', `animosity', and `prejudiced discussions' by Task B. Figure \ref{fig:taskb} demonstrates the proportions of different types of sexist content.%\vspace{-6pt}
+
+
+
+As we can see, `derogation' was the most prevalent, comprising 46.8\% of the sexist texts. In Figure~\ref{fig:unique}, we identify the top unique words for each category of sexist content to understand common words associated with each category. In category 1, common words included `women', `beat', and `shit', reflecting violent and harmful intentions. Frequent words were `women', `don't', and `want', indicating derogatory and dismissive language associated with category 2. In category 3, words like `women', `like', and `bitch' were prevalent, showing animosity. Top words included `women', `years', and `rape/sexual/divorce', indicating prejudiced discussions often revolving around stereotypes and harmful myths for category 4.
+\vspace{-5pt}
+
+\begin{figure}[H]
+    %\centering
+    \includegraphics[width=0.7\textwidth]{Plots/EDA4.png}
+    \caption{Proportions of different categories of sexist texts.}
+    \label{fig:taskb}
+\end{figure}
+\vspace{-9pt}
+
+\begin{figure}[H]
+    %\centering
+ \hspace{-20pt}   \includegraphics[width=1\textwidth]{Plots/EDA5.png} % 
+    \caption{\hl{Top}%MDPI: The SUM of the pie charts is not equal to ONE HUNDRED. Please revise.
+    ~unique words for each category of sexist content.}
+    \label{fig:unique}
+\end{figure}
+
+Here, we analyze the sentiment polarity of sentences containing top word pairs in each category of sexist content to understand the emotional impact of sexist content and how it varies across different types of sexism. {Sentiment polarity refers to the classification of a sentence as positive, negative, or neutral, which allows us to assess the emotional tone associated with the content~~\cite{prabha2019survey}.} Figure~\ref{fig:sentiment} shows the distribution of sentiment scores within each category. %\vspace{-6pt}
+
+
+
+ \vspace{-5pt}
+
+\begin{figure}[H]
+  %  \centering
+    \includegraphics[width=0.9\textwidth]{Plots/EDA6.png}
+    \caption{Sentiment polarity scores.}
+    \label{fig:sentiment}
+\end{figure}
+
+Based on the sentiment polarity distribution shown in the box plot, the analysis of the minimum and maximum scores within the interquartile range (IQR) reveals significant insights. For the first category, the IQR ranges from $-$0.2 to 0.0, indicating that most comments are moderately negative to neutral, reflecting the mixed nature of this category. In the derogation category, the IQR spans from $-$0.3 to 0.09, showing that most comments are generally negative to slightly positive, suggesting derogatory remarks often contain a blend of sentiments. Animosity has an IQR from $-$0.1 to 0.089, indicating that while extreme sentiments exist, the majority of comments are slightly negative to neutral. Prejudiced discussions have the narrowest IQR from 0.0 to 0.202, suggesting that sentiments within this category are more consistently neutral to positive. These IQRs reveal that while extreme sentiments exist, the bulk of comments tend to be less extreme and range from moderately negative to neutral, with derogation and threats categories showing the most variability in negative sentiments. 
+
+
+\subsection{Model Training and Optimization}
+
+The experimental steps of this study followed a progressive approach, initially based on the methodology introduced by~\citet{hadi_mohammadi_2023_8144300}. We further tested this approach using two datasets: EXIST 2023 (\url{http://nlp.uned.es/exist2023/}, \highlighting{(accessed on))} and EDOS (\url{https://github.com/rewire-online/edos},  \highlighting{(accessed on)).} {While EDOS mainly focuses on content from Gab and Reddit, EXIST is based on Twitter, a more mainstream and diverse platform. This combination of datasets allows us to test the model’s ability to generalize across both niche and widely used social media environments. The results of the model on the EXIST dataset can be found in~\cite{hadi_mohammadi_2023_8144300}. However, although the first task in both datasets is similar (sexism detection), we did not compare the results due to the completely different dataset compositions and annotation processes.} Initially, we started with more traditional models as our baseline. Over time, we improved and tested these models with different variations and techniques until we developed the final structure of our model. Furthermore, upon publication of this article, the comprehensive final model, accompanied by all requisite materials, will be accessible on GitHub (\url{https://github.com/hadimh93/Explainable-Sexim-Detection}, \highlighting{(accessed on)).}
+
+During the training phase, we used the Adam optimizer~\cite{kingma2014adam}. We selected the model's hyperparameters, such as the learning rate and batch size, using a random search approach with Keras Tuner (\url{https://blog.tensorflow.org/2020/01/hyperparameter-tuning-with-keras-tuner.html}, \highlighting{(accessed on)).} The learning rate was set at \(3 \times 10^{-5}\), enabled by a TensorFlow-based learning rate scheduler (\url{https://www.tensorflow.org/api_docs/python/tf/keras/callbacks/LearningRateScheduler}, \highlighting{(accessed on)),} including a 200-step warm-up phase. To enhance efficiency and learning, we chose an early stopping mechanism (\url{https://www.tensorflow.org/api_docs/python/tf/keras/callbacks/EarlyStopping}, \highlighting{(accessed on))} and mixed precision training (\url{https://www.tensorflow.org/guide/mixed_precision}, \highlighting{(accessed on)).} Our preprocessing step considered a tokenization limit of 512. Subsequently, we selected important hyperparameters, such as the learning rate and batch size, using a random search approach with Keras Tuner. The learning rate followed a cosine decay schedule (\url{https://keras.io/api/optimizers/learning_rate_schedules/cosine_decay/}, \highlighting{(accessed on)),} completed by a warm-up period, which was calibrated to the dataset and the number of epochs. We used early stopping based on validation losses to prevent overfitting~\cite{brownlee2018gentle}.
+
+The binary cross-entropy loss function (\url{https://www.tensorflow.org/api_docs/python/tf/keras/losses/BinaryCrossentropy}, \highlighting{(accessed on))} and the Adam optimizer (\url{https://keras.io/api/optimizers/adam/}, \highlighting{(accessed on))} were used for training, employing the ’mixed float16’ precision training policy (\url{https://keras.io/api/mixed_precision/}, \highlighting{(accessed on)).} A custom function was developed for model structure, employing various transformers like \hl{bert-base-multilingual-uncased}, \hl{xlm-roberta-base}, and \hl{distilbert-base-multilingual-cased}. These transformers’ outputs were amalgamated for binary classification with L2 regularization (\url{https://www.tensorflow.org/api_docs/python/tf/keras/regularizers/L2}, \highlighting{(accessed on)).} A comprehensive summary of the hyperparameters we examined is presented in Table \ref{tab:hyperparameters}.
+
+{
+%\centering
+\renewcommand{\arraystretch}{1}
+\begin{table}[H]
+\small
+\caption{Summary of model parameters and hyperparameters.}  \setlength{\tabcolsep}{4.3mm}
+\label{tab:hyperparameters} 
+\begin{tabular}{ll}
+\toprule
+\textbf{ Parameter} & \textbf{ Description} \\ 
+\midrule
+%\endhead
+
+    %Text Preprocessing & Conversion to lowercase, removal of URLs, special characters, punctuation, tokenization, lemmatization \\
+    
+     Tokenization Max Length &  512 tokens \\
+    
+     Learning Rate Range &  \hl{1 $\times 10^{-5}$} %MDPI: Please use the scientific notation, e.g., "$8 \times 10^{3}$", not "8E3". We corrected them. Please confirm.
+ to \hl{1 $\times 10^{-4}$} (Default: \hl{3 $\times 10^{-5}$})\\
+    
+     Batch Sizes &  32, 64, 128 \\
+    
+     Learning Rate Scheduler~~~~~~~~~~~ ~~~~~~~~~~~ ~~~~~~~~~~~ ~~~~~ &  Cosine decay schedule \\
+    
+     Warm up Steps &  200 steps \\
+    
+     Early Stopping Patience &  5 epochs \\
+    
+     Loss Function &  Binary cross-entropy \\
+    
+     Optimizer &  Adam \\
+    
+     Precision Training Policy &  Mixed float16 \\
+    
+    %Transformers Used & bert-base-multilingual-uncased, xlm-roberta-base, distilbert-base-multilingual-cased \\
+\bottomrule
+\end{tabular}
+\end{table}
+}
+
+In evaluating the performance of various models, we considered several key metrics, including accuracy, precision, recall, and F1 score across multiple tasks. Table~\ref{tab:Performancemetrics} summarizes the results of our experiments, comparing the performance of different models on Tasks A (binary classification of posts as sexist or non-sexist), B (four-class classification of sexist posts), and C (11-class system for more specific labels of sexism).
+
+According to Table~\ref{tab:Performancemetrics},  the CustomBERT model consistently outperforms the individual models across all tasks. For Task A, the CustomBERT model achieves the highest accuracy of 0.79, precision of 0.77, recall of 0.79, and F1 score of 0.76. Similarly, for Task B, the CustomBERT model leads with an accuracy of 0.71, precision of 0.69, recall of 0.71, and F1 score of 0.68. For Task C, the CustomBERT model again surpasses the others, showing superior performance with an accuracy of 0.67, precision of 0.65, recall of 0.67, and F1 score of 0.64.
+
+The consistent performance improvements observed with the CustomBERT model highlight the benefits of an ensemble approach, effectively combining the strengths of various models to achieve better overall results. This ensemble strategy, therefore, was selected as the final model for our application due to its robust performance across multiple evaluation metrics and tasks.
+
+
+{
+%\centering
+\renewcommand{\arraystretch}{1}
+\begin{table}[H]
+\small
+\caption{{Performance results of CustomBERT and baselines on Tasks A, B, and C. The best performance result in each task is \textbf{bolded}}.}  \setlength{\tabcolsep}{5.5mm}
+\label{tab:Performancemetrics} 
+\begin{tabular}{lllll}
+\toprule
+
+\textbf{ Model} & \textbf{ Accuracy} & \textbf{ Precision} & \textbf{ Recall} & \textbf{ F1 Score} \\ 
+\midrule
+
+
+\multicolumn{5}{c}{\hl{\textbf{Task A}}} \\
+
+ Logistic Regression~~~~~~ &  0.70 ~~~~~&  0.42~~~~~~&  0.70 ~~~~~~&  0.46 \\
+ XGBOOST &  0.72 &  0.45 &  0.72 &  0.49 \\
+ BERT &  0.76 &  0.57 &  0.76 &  0.65 \\
+ XLM-RoBERTa &  0.76 &  0.57 &  0.76 &  0.65 \\
+ DistilBERT &  0.77 &  0.74 &  0.77 &  0.72 \\
+\hl{ CustomBERT} & \hl{\textbf{ 0.79} }& \hl{\textbf{ 0.77}} & \hl{\textbf{ 0.79}} & \hl{\textbf{ 0.76}} \\
+
+\midrule
+\multicolumn{5}{c}{\hl{\textbf{Task B}}} \\
+
+ Logistic Regression &  0.54 &  0.25 &  0.54 &  0.23 \\
+ XGBOOST &  0.56 &  0.27 &  0.56 &  0.21 \\
+ BERT &  0.68 &  0.52 &  0.68 &  0.59 \\
+ XLM-RoBERTa &  0.67 &  0.51 &  0.67 &  0.58 \\
+ DistilBERT &  0.69 &  0.66 &  0.69 &  0.65 \\
+\hl{ CustomBERT} & \hl{\textbf{ 0.71}} & \hl{\textbf{ 0.69}} & \hl{\textbf{ 0.71}} & \hl{\textbf{ 0.68}} \\
+
+\midrule
+\multicolumn{5}{c}{\hl{\textbf{Task C}}} \\
+
+ Logistic Regression &  0.40 &  0.10 &  0.40 &  0.07 \\
+ XGBOOST &  0.42 &  0.12 &  0.42 &  0.08 \\
+ BERT &  0.63 &  0.44 &  0.63 &  0.52 \\
+ XLM-RoBERTa &  0.64 &  0.46 &  0.64 &  0.53 \\
+ DistilBERT &  0.65 &  0.62 &  0.65 &  0.60 \\
+\hl{ CustomBERT} & \hl{\textbf{ 0.67}} & \hl{\textbf{ 0.65}} & \hl{\textbf{ 0.67}} & \hl{\textbf{ 0.64}} \\
+
+\bottomrule
+\end{tabular}
+\end{table}
+}
+
+
+
+
+\subsection{Explainability Results}
+\label{subsec:explainableresults}
+
+In this section, we explore the explainability of our model by analyzing the SHAP values to understand the contribution of individual tokens to the model's predictions. Explainability is crucial for ensuring that our model's decisions are transparent and interpretable, particularly in sensitive applications such as detecting sexist content.%\vspace{-6pt}
+
+
+
+Figure~\ref{fig:token} illustrates the SHAP importance and cumulative importance of the top 20 tokens. These tokens significantly contribute to the model's prediction outcomes, as described by Equations~(\ref{eq:shap})\hl{--}%MDPI: We changed `till' into en dash, please confirm.
+(\ref{eq:cumulative_importance}). Notably, the most effective tokens predominantly consist of offensive language directed towards women. Additionally, we computed the Sexism Score for texts labeled as 'YES' (indicative of sexism) using Equation~(\ref{eq:sexism_score}). To provide a more comprehensive understanding, we present the statistical summary of the Sexism Scores for these texts in Table~\ref{tab:shap_summary}.
+
+
+\begin{figure}[H] 
+%\centering
+\includegraphics[width=0.86\textwidth]{Plots/importance.pdf} 
+\caption{Cumulative importance of top 20 tokens.} 
+\label{fig:token}
+\end{figure}
+
+\vspace{-9pt}
+{
+%\centering
+\renewcommand{\arraystretch}{1.2}
+\begin{table}[H]
+\small
+\caption{Statistical summary of SHAP scores.}  \setlength{\tabcolsep}{8.3mm}
+\label{tab:shap_summary} 
+\begin{tabular}{ll}
+\midrule
+\textbf{ Statistic} & \textbf{ Value} \\ 
+\midrule
+
+
+ Count &  \hl{14,000} \\
+ Mean &  $-$0.271917 \\
+ Standard Deviation &  0.458922 \\
+ Minimum &  $-$0.963626 \\
+ 25th Percentile ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&  $-$0.526098 \\
+ 50th Percentile (Median) &  $-$0.483276 \\
+ 75th Percentile &  $-$0.297328 \\
+ Maximum &  0.962766 \\
+\bottomrule
+\end{tabular}
+\end{table}
+}
+
+This statistical summary provides insights into the distribution of Sexism Scores among texts labeled as sexist. The mean score indicates a moderate level of sexism on average, as evidenced by the standard deviation. The median and percentile values offer additional details about the central tendency and variability of the scores. To take a closer look at the distribution of Sexism Scores, we created a histogram, as shown in Figure~\ref{fig:sexism_distribution}.\vspace{-3pt}
+
+\begin{figure}[H]
+%\centering
+\hspace{-2em}\includegraphics[width=0.7\textwidth]{Plots/histogram.pdf}
+\caption{Distribution of Sexism Scores for texts labeled as sexist.}
+\label{fig:sexism_distribution}
+\end{figure}
+
+The histogram in Figure~\ref{fig:sexism_distribution} depicts the density of Sexism Scores across the dataset. The x-axis represents the Sexism Scores, while the y-axis indicates the density of texts with those scores. Notably, the distribution features two prominent peaks, suggesting a bimodal distribution of Sexism Scores.
+
+The first peak, centered around $-$0.4, corresponds to texts that have been labeled as 'NO' but contain tokens with relatively high SHAP importance in negative contexts, resulting in negative Sexism Scores. The second peak, centered around 0.4, represents texts labeled as 'YES' with high SHAP importance in positive contexts. Additionally, the histogram shows a notable gap around the zero mark, indicating a clear separation between texts identified as sexist and non-sexist by the model. 
+
+In this study, we opted to set the threshold at 0.95, indicating that we considered tokens contributing to 95\% of the cumulative importance\hl{,} %MDPI:Please check if this is extra.
+~based on   Formula~(\ref{eq:importance_ratio})\hl{.} %MDPI: Newly added information. Please confirm.
+ Consequently, the number of selected tokens amounted to 197. With this configuration, we identified the most influential tokens and their contributions to the model's decision-making process regarding sexist content. A comprehensive list of all effective tokens can be found in Appendix \ref{subsec:effectivetokens}.%\vspace{-9pt}
+
+
+%\newpage
+Figure \ref{fig:threeshod} shows the relationship between the threshold and the number of selected tokens. As the threshold increases, the number of tokens contributing to the cumulative importance also increases, with a marked rise observed near the higher thresholds. At a threshold of 0.95, we capture the most significant tokens influencing the model's output.
+
+%Figure . Threeshod
+\begin{figure}[H] 
+%\centering
+\includegraphics[width=0.88\textwidth]{Plots/threshold.pdf} 
+\caption{\hl{Threshold}%MDPI: We moved Figure after its first citation, please confirm
+~vs. number of selected tokens.} 
+\label{fig:threeshod}
+\end{figure}
+
+Next, we will validate the effectiveness of the selected tokens and the threshold choice in accurately identifying sexist content. By ensuring that the selected tokens are both influential and relevant to the model's predictions, we enhance the model's interpretability and reliability.
+
+
+%\subsection{Model Performance By Considering Explainability}
+%\label{sec:explainability_performance}
+
+To evaluate the impact of Sexism Scores on model performance, we segmented the data into bins based on Sexism Score ranges and calculated the performance metrics for each bin. The results for the test dataset are summarized in Table~\ref{tab:performance}.
+
+As depicted in Table~\ref{tab:performance}, there is a positive correlation between the Sexism Score and the performance metrics. Lower and higher Sexism Scores generally correspond to better model performance, indicating increased confidence and accuracy in identifying strongly sexist content. This trend suggests that the model is more reliable in detecting content with higher Sexism Scores, which aligns with its design to emphasize the most impactful tokens.
+
+{
+%\centering
+\renewcommand{\arraystretch}{1.1}
+\begin{table}[H]
+\small
+\caption{Performance metrics for the test dataset in each bin across Tasks A, B, and C. The best performance result in each task is \textbf{bolded}} \setlength{\tabcolsep}{4.2mm}
+\label{tab:performance} 
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Bin} &  \textbf{ Accuracy} & \textbf{ Precision} & \textbf{ Recall} & \textbf{ F1 Score} \\ 
+\midrule
+
+ ($-$0.332, $-$0.0644] $\bigcup$   (0.734, 0.984] &    \textbf{0.79} &  \textbf{0.78} &  \textbf{0.79} & \textbf{ 0.78} \\
+ ($-$0.0644, 0.202] $\bigcup$   (0.202, 0.468] &    0.78 &  0.76 &  0.78 &  0.77 \\
+ (0.468, 0.734] &    0.77 &  0.75 &  0.77 &  0.76 \\
+\hl{ All\,data\,(Task\,A)}~~ &  \hl{\textbf{ 0.79}} & \hl{ 0.77} & \hl{\textbf{ 0.79}} & \hl{ 0.76} \\
+
+\midrule
+
+ ($-$0.332, $-$0.0644] $\bigcup$  (0.734, 0.984] &   \textbf{ 0.72} &  \textbf{0.70} &  \textbf{0.72} &  \textbf{0.71} \\
+ ($-$0.0644, 0.202] $\bigcup$  (0.202, 0.468] &   0.71 &  0.69 &  0.71 &  0.70 \\
+ (0.468, 0.734] &   0.70 &  0.68 &  0.70 &  0.69 \\
+\hl{ All\,data\,(Task\,B)}~~~~~~ &  \hl{ 0.71} & \hl{ 0.69} & \hl{ 0.71} & \hl{  0.68} \\
+
+\midrule
+
+ (-0.332, -0.0644] $\bigcup$  (0.734, 0.984] &    \textbf{0.68} &  \textbf{0.66} &  \textbf{0.68} &  \textbf{0.67} \\
+ (-0.0644, 0.202] $\bigcup$  (0.202, 0.468] &     0.67 &  0.65 &  0.67 &  0.66 \\
+ (0.468, 0.734] &     0.66 &  0.64 &  0.66 &  0.65 \\
+\hl{ All\,data\,(Task\,C)} &  \hl{ 0.67} & \hl{ 0.65} & \hl{ 0.67} & \hl{ 0.64} \\
+
+\bottomrule
+\end{tabular}
+\end{table}
+}
+
+
+
+\subsection{Increasing Model Efficiency}
+\label{sec:efficiency}
+
+To demonstrate the efficiency improvements achieved by our model, we compared its performance and runtime when processing the entire dataset versus only sentences with high Sexism Scores. Table~\ref{tab:efficiency_comparison} provides a detailed comparison of these scenarios.
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.2}
+\small%\centering
+\caption{Efficiency comparison.} 
+\label{tab:efficiency_comparison}
+\begin{tabular}{llllll}
+\toprule
+\textbf{ Dataset Portion} & \textbf{ Accuracy} & \textbf{ Precision} & \textbf{ Recall} & \textbf{ F1 Score} & \textbf{ Runtime (s)} \\
+\midrule
+ All Sentences &  0.79 &  0.77 &  0.79 &  0.76 &  1578 (26.3 min) \\
+ High Sexism Score (Top 80\%) &  0.79 &  0.75 &  0.76 &  0.73 &  1342 (22.4 min) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+As shown, by focusing on sentences with higher Sexism Scores, the runtime is reduced by 13\% while maintaining comparable performance metrics. This significant reduction in processing time demonstrates that prioritizing sentences with higher Sexism Scores can enhance model efficiency without substantially compromising accuracy, precision, recall, or F1 score.
+
+This approach leverages the insights gained from the explainability analysis, where tokens with higher SHAP values were identified as more impactful in the model's decision-making process. By concentrating computational resources on these high-impact tokens, we achieve a more efficient processing pipeline. Details of the computing environment used for all experiments can be found in the Appendix~\ref{subsec:model}.
+
+\subsection{Usability For Decision Makers}
+\label{sec:usability}
+
+{The pipeline consists of two key elements: (1) the model's true prediction based on the annotated data, and (2) the SHAP value analysis highlighting the most influential tokens in the sentence. By introducing the sexism range which combines both predictions and  influential tokens, decision makers are provided with a transparent view of why a certain sentence is classified as sexist. This can improve their ability to make informed decisions quickly, focusing on the most relevant content. As a result, organizations can have better confidence in their moderation efforts and lessen their dependency on costly extensive manual annotation.}
+
+{Moreover, this approach addresses one of the key limitations of traditional machine learning models—black-box decision making—by providing a human-interpretable explanation of how the model arrived at a decision. This transparency is essential for maintaining ethical standards and avoiding potential biases in automated content moderation, as well as mitigating the risk of false positives or negatives, which are particularly critical when dealing with sensitive content like sexism.}
+
+{Also, human annotation, especially for sensitive topics like sexism, is a resource-intensive process, both in terms of time and cost. This approach offers a more transparent and interpretable pipeline where decision makers do not need to manually evaluate every sentence. Instead, they can focus on sentences flagged by the model with the highest Sexism Scores, and use SHAP values to validate   the most significant parts of the text. This not only reduces the time required for manual review but also provides a clear rationale for each decision, enhancing trust in the system.}
+
+{While this paper mainly evaluates the model on data from Gab and Reddit, future work will focus on validating the model across more platforms, to ensure its generalizability. This will help address concerns about cross-platform validation, expanding the model's usability in diverse real-world settings. Additionally, by simplifying the complexity of the system and making the SHAP explanations more actionable, organizations without significant computational resources can implement the model more effectively, ensuring practical utility without sacrificing interpretability or performance.}
+
+\section{Discussion and Conclusions}
+\label{sec:conclusion}
+
+%\subsection{Discussion}
+
+The present study introduces a new methodology for detecting sexism in textual content by using explainability to define a Sexism Score. This approach integrates ensemble modelling and SHAP values for understanding and identifying sexist language. Our methodology shows advancements in the field of sexism detection. The ensemble model design, CustomBERT, which combined various BERT versions with a CNN architecture, capitalized on the strengths of multiple transformer models, enhancing the overall accuracy and robustness of the system.
+%\newpage
+
+The explainability analysis using SHAP values provided a deeper understanding of the model's decision-making process. By identifying the most influential tokens, we could assign a meaningful Sexism Score to each text entry, thereby offering a transparent and interpretable metric for sexism detection. This aspect is crucial, as it not only improves the trustworthiness of the model but also aids in highlighting specific elements within the text that contribute to its classification as sexist.
+
+Experimental results indicated that our CustomBERT model outperforms individual transformer models across all tasks. Also, the implementation of Sexism Scores based on SHAP values showed a clear correlation between these scores and model performance. Texts with higher Sexism Scores were more reliably identified as sexist, highlighting the efficacy of our explainability-driven approach. Moreover, the efficiency improvements observed by prioritizing high-scoring sentences underscore the practical benefits of this methodology in real-world applications, where processing time and computational resources are critical considerations.
+
+In conclusion, this study presents an interpretable framework for sexism detection in textual content. By integrating a sophisticated ensemble modeling approach, and a thorough explainability analysis, we have developed a model that provides valuable insights into its decision-making process. The introduction of Sexism Scores enhances the model's transparency and interpretability, making it a valuable tool for both academic research and practical applications in combating online harassment and promoting respectful discourse.
+
+Future work can explore the application of this methodology to other forms of hate speech and biased language, further refining the explainability components to address diverse linguistic and cultural contexts. Additionally, integrating user feedback into the explainability analysis could enhance the model's adaptability and accuracy, ensuring its continued relevance and effectiveness in dynamic online environments.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{Patents}
+
+%This section is not mandatory, but may be added if there are patents resulting from the work reported in this manuscript.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{6pt} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% optional
+%\supplementary{The following supporting information can be downloaded at:  \linksupplementary{s1}, Figure S1: title; Table S1: title; Video S1: title.}
+
+% Only for journal Methods and Protocols:
+% If you wish to submit a video article, please do so with any other supplementary material.
+% \supplementary{The following supporting information can be downloaded at: \linksupplementary{s1}, Figure S1: title; Table S1: title; Video S1: title. A supporting video article is available at doi: link.}
+
+% Only for journal Hardware:
+% If you wish to submit a video article, please do so with any other supplementary material.
+% \supplementary{The following supporting information can be downloaded at: \linksupplementary{s1}, Figure S1: title; Table S1: title; Video S1: title.\vspace{6pt}\\
+%\begin{tabularx}{\textwidth}{lll}
+%\toprule
+%\textbf{Name} & \textbf{Type} & \textbf{Description} \\
+%\midrule
+%S1 & Python script (.py) & Script of python source code used in XX \\
+%S2 & Text (.txt) & Script of modelling code used to make Figure X \\
+%S3 & Text (.txt) & Raw data from experiment X \\
+%S4 & Video (.mp4) & Video demonstrating the hardware in use \\
+%... & ... & ... \\
+%\bottomrule
+%\end{tabularx}
+%}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\authorcontributions{\hl{Conceptualization, H.M., A.G. and A.B.; Methodology, H.M., A.G. and A.B.; Resources, H.M.; Writing – original draft, H.M.; Writing – review \& editing, A.G. and A.B.; Supervision, A.G. and A.B. All authors have read and agreed to the published version of the manuscript.} %MDPI: 
+} %MDPI: We added content here according to system, please check and confirm.
+
+\funding{This research received no external funding.}
+
+\institutionalreview{\hl{ }.%MDPI:In this section, you should add the Institutional Review Board Statement and approval number, if relevant to your study. You might choose to exclude this statement if the study did not require ethical approval. Please note that the Editorial Office might ask you for further information. Please add “The study was conducted in accordance with the Declaration of Helsinki, and approved by the Institutional Review Board (or Ethics Committee) of NAME OF INSTITUTE (protocol code XXX and date of approval).” for studies involving humans. OR “The animal study protocol was approved by the Institutional Review Board (or Ethics Committee) of NAME OF INSTITUTE (protocol code XXX and date of approval).” for studies involving animals. OR “Ethical review and approval were waived for this study due to REASON (please provide a detailed justification).” OR “Not applicable” for studies not involving humans or animals.
+}
+
+\informedconsent{\hl{ }.%MDPI: Any research article describing a study involving humans should contain this statement. Please add ``Informed consent was obtained from all subjects involved in the study.'' OR ``Patient consent was waived due to REASON (please provide a detailed justification).'' OR ``Not applicable'' for studies not involving humans. You might also choose to exclude this statement if the study did not involve humans.
+
+%Written informed consent for publication must be obtained from participating patients who can be identified (including by the patients themselves). Please state ``Written informed consent has been obtained from the patient(s) to publish this paper'' if applicable.
+}
+
+\dataavailability{\hl{Publicly available datasets were analyzed in this study. This data can be found here: (https://github.com/rewire-online/edos)}.%MDPI: We encourage all authors of articles published in MDPI journals to share their research data. Data Availability Statements provide details regarding where data supporting reported results can be found, including links to publicly archived datasets analyzed or generated during the study.
+%Below are suggested Data Availability Statements:
+%(we recommended case 5)
+%1. Data available in a publicly accessible repository
+%   -The data presented in this study are openly available in [repository name e.g., FigShare] at [doi], reference number [reference number].
+%2. Data available in a publicly accessible repository that does not issue DOIs
+%   -Publicly available datasets were analyzed in this study. This data can be found here: [link/accession number].
+%3. Data available on request due to restrictions eg privacy or ethical
+%   -The data presented in this study are available on request from the corresponding author. The data are not publicly available due to [insert reason here].
+%4. 3rd Party Data
+%   -Restrictions apply to the availability of these data. Data was obtained from [third party] and are available [from the authors/at URL] with the permission of [third party].
+%5.  Data is contained within the article or supplementary material
+%   -The data presented in this study are available in [insert article or supplementary material here].
+} 
+
+% Only for journal Nursing Reports
+%\publicinvolvement{Please describe how the public (patients, consumers, carers) were involved in the research. Consider reporting against the GRIPP2 (Guidance for Reporting Involvement of Patients and the Public) checklist. If the public were not involved in any aspect of the research add: ``No public involvement in any aspect of this research''.}
+
+% Only for journal Nursing Reports
+%\guidelinesstandards{Please add a statement indicating which reporting guideline was used when drafting the report. For example, ``This manuscript was drafted against the XXX (the full name of reporting guidelines and citation) for XXX (type of research) research''. A complete list of reporting guidelines can be accessed via the equator network: \url{https://www.equator-network.org/}.}
+
+%\acknowledgments{In this section you can acknowledge any support given which is not covered by the author contribution or funding sections. This may include administrative and technical support, or donations in kind (e.g., materials used for experiments).}
+
+\conflictsofinterest{\hl{The authors declare no conflicts of interest. }.%MDPI: Declare conflicts of interest or state ``The authors declare no conflicts of interest.'' Authors must identify and declare any personal circumstances or interest that may be perceived as inappropriately influencing the representation or interpretation of reported research results. Any role of the funders in the design of the study; in the collection, analyses or interpretation of data; in the writing of the manuscript; or in the decision to publish the results must be declared in this section. If there is no role, please state ``The funders had no role in the design of the study; in the collection, analyses, or interpretation of data; in the writing of the manuscript; or in the decision to publish the results''.
+} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Optional
+
+%% Only for journal Encyclopedia
+%\entrylink{The Link to this entry published on the encyclopedia platform.}
+
+\abbreviations{Abbreviations}{
+The following abbreviations are used in this manuscript:\vspace{-5pt}\\
+
+\noindent 
+\begin{tabular}{@{}ll}
+AI & Artificial Intelligence\\
+BERT & Bidirectional Encoder Representations from Transformers\\
+CNN & Convolutional Neural Network\\
+LLM ~~~& Large Language Model\\
+NLP & Natural Language Processing\\
+SHAP & Shapley Additive Explanations\\
+XAI & Explainable Artificial Intelligence\\
+XNLP & Explainable Natural Language Processing
+\end{tabular}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Optional
+\appendixtitles{yes} % Leave argument "no" if all appendix headings stay EMPTY (then no dot is printed after "Appendix A"). If the appendix sections contain a heading then change the argument to "yes".
+\appendixstart
+\appendix
+%\section[\appendixname~\thesection]{}
+%\subsection[\appendixname~\thesubsection]{}
+%The appendix is an optional section that can contain details and data supplemental to the main text---for example, explanations of experimental details that would disrupt the flow of the main text but nonetheless remain crucial to understanding and reproducing the research shown; figures of replicates for experiments of which representative data are shown in the main text can be added here if brief, or as Supplementary Data. Mathematical proofs of results not central to the paper can be added as an appendix.
+
+
+%\section[\appendixname~\thesection]{}
+%All appendix sections must be cited in the main text. In the appendices, Figures, Tables, etc. should be labeled, starting with ``A''---e.g., Figure A1, Figure A2, etc.
+
+\section[\appendixname~\thesection]{{System Configuration}}
+\label{subsec:model}
+
+The experiments were conducted on a SURF (\url{https://www.surf.nl/en}, \hl{(accessed on)}) Azure cloud instance with the following configuration:
+
+\begin{itemize}
+\item Operating System: Ubuntu 20.04 server
+\item Instance Type: GPU 24 Core\hl{---}%MDPI: We changed hyphen into em dash, please confirm. Same as below.
+~220 GB RAM\hl{---}1\hl{x}%MDPI: Please check if it should be changed into multiplication sign (U+00D7).
+~A100 (Standard\_NC24ads\_A100\_v4)
+\end{itemize}
+
+\newpage
+\section[\appendixname~\thesection]{Effective Tokens}
+\label{subsec:effectivetokens}
+\vspace{1pt}
+The following table lists all the effective tokens identified by our model:
+\vspace{-5pt}
+\pgfplotstableread[col sep=comma]{Plots/significant_tokens.csv}\significanttokens
+{
+\begin{table}[H]
+\renewcommand{\arraystretch}{0.5}
+
+\raggedright % Align the table to the left
+\caption{\hl{List}%MDPI: 1. Please check if dot in scientific notation should be changed into multiplication sign (U+00D7); 2. Please check if Table A1 format should be retained.
+~of effective tokens.} \setlength{\tabcolsep}{4.6mm}
+\label{tab:effectivetokens}
+\pgfplotstabletypeset[
+    % Adjust font size
+    every table/.style={font=\small}, % Change \small to desired font size
+    % Table header and row styling
+    every head row/.style={before row=\toprule,after row=\midrule},
+    every last row/.style={after row=\bottomrule},
+    % Custom column headers
+    columns/Token/.style={string type, column name={\textbf{Token}}, column type=l},
+    columns/SHAP Importance/.style={column name={\textbf{SHAP Importance}}},
+    columns/Importance Ratio/.style={column name={\textbf{Importance Ratio}}},
+    columns/Cumulative Importance/.style={column name={\textbf{Cumulative Importance}}},
+    % Display only first 60 rows
+    row predicate/.code={\pgfmathparse{#1<60}\ifnum\pgfmathresult=1\relax\else\pgfplotstableuserowfalse\fi}
+]{\significanttokens}
+
+\end{table}
+
+\begin{table}[H]  \setlength{\tabcolsep}{4.6mm}
+\renewcommand{\arraystretch}{0.5}
+
+\raggedright % Align the table to the left
+%\caption{List of Effective Tokens (Next 60 rows)}
+%\label{tab:effectivetokens2}
+\pgfplotstabletypeset[
+    % Adjust font size
+    every table/.style={font=\small}, % Change \small to desired font size
+    % Table header and row styling
+    every head row/.style={before row=\toprule,after row=\midrule},
+    every last row/.style={after row=\bottomrule},
+    % Custom column headers
+    columns/Token/.style={string type, column name={\textbf{Token}}, column type=l},
+    columns/SHAP Importance/.style={column name={\textbf{SHAP Importance}}},
+    columns/Importance Ratio/.style={column name={\textbf{Importance Ratio}}},
+    columns/Cumulative Importance/.style={column name={\textbf{Cumulative Importance}}},
+    % Display rows from 60 to 119
+    row predicate/.code={\pgfmathparse{#1>=60 && #1<120}\ifnum\pgfmathresult=1\relax\else\pgfplotstableuserowfalse\fi}
+]{\significanttokens}
+
+\end{table}
+}
+
+\pgfplotstableread[col sep=comma]{Plots/significant_tokens.csv}\significanttokens
+{
+\begin{table}[H]  \setlength{\tabcolsep}{4.85mm}
+\renewcommand{\arraystretch}{0.5}
+
+\raggedright % Align the table to the left
+%\caption{List of Effective Tokens (Next 60 rows)}
+%\label{tab:effectivetokens3}
+\pgfplotstabletypeset[
+    % Adjust font size
+    every table/.style={font=\small}, % Change \small to desired font size
+    % Table header and row styling
+    every head row/.style={before row=\toprule,after row=\midrule},
+    every last row/.style={after row=\bottomrule},
+    % Custom column headers
+    columns/Token/.style={string type, column name={\textbf{Token}}, column type=l},
+    columns/SHAP Importance/.style={column name={\textbf{SHAP Importance}}},
+    columns/Importance Ratio/.style={column name={\textbf{Importance Ratio}}},
+    columns/Cumulative Importance/.style={column name={\textbf{Cumulative Importance}}},
+    % Display rows from 120 to 179
+    row predicate/.code={\pgfmathparse{#1>=120 && #1<180}\ifnum\pgfmathresult=1\relax\else\pgfplotstableuserowfalse\fi}
+]{\significanttokens}
+
+\end{table}
+
+\begin{table}[H]  \setlength{\tabcolsep}{4.4mm}
+\renewcommand{\arraystretch}{0.5}
+
+\raggedright % Align the table to the left
+%\caption{List of Effective Tokens (Next 60 rows)}
+%\label{tab:effectivetokens4}
+\pgfplotstabletypeset[
+    % Adjust font size
+    every table/.style={font=\small}, % Change \small to desired font size
+    % Table header and row styling
+    every head row/.style={before row=\toprule,after row=\midrule},
+    every last row/.style={after row=\bottomrule},
+    % Custom column headers
+    columns/Token/.style={string type, column name={\textbf{Token}}, column type=l},
+    columns/SHAP Importance/.style={column name={\textbf{SHAP Importance}}},
+    columns/Importance Ratio/.style={column name={\textbf{Importance Ratio}}},
+    columns/Cumulative Importance/.style={column name={\textbf{Cumulative Importance}}},
+    % Display rows from 180 to 239
+    row predicate/.code={\pgfmathparse{#1>=180 && #1<240}\ifnum\pgfmathresult=1\relax\else\pgfplotstableuserowfalse\fi}
+]{\significanttokens}
+
+\end{table}
+}
+
+\pgfplotstableread[col sep=comma]{Plots/significant_tokens.csv}\significanttokens
+{
+\begin{table}[H]  \setlength{\tabcolsep}{5.2mm}
+\renewcommand{\arraystretch}{0.5}
+
+\raggedright % Align the table to the left
+%\caption{List of Effective Tokens (Next 60 rows)}
+%\label{tab:effectivetokens5}
+\pgfplotstabletypeset[
+    % Adjust font size
+    every table/.style={font=\small}, % Change \small to desired font size
+    % Table header and row styling
+    every head row/.style={before row=\toprule,after row=\midrule},
+    every last row/.style={after row=\bottomrule},
+    % Custom column headers
+    columns/Token/.style={string type, column name={\textbf{Token}}, column type=l},
+    columns/SHAP Importance/.style={column name={\textbf{SHAP Importance}}},
+    columns/Importance Ratio/.style={column name={\textbf{Importance Ratio}}},
+    columns/Cumulative Importance/.style={column name={\textbf{Cumulative Importance}}},
+    % Display rows from 240 to 299
+    row predicate/.code={\pgfmathparse{#1>=240 && #1<300}\ifnum\pgfmathresult=1\relax\else\pgfplotstableuserowfalse\fi}
+]{\significanttokens}
+
+\end{table}
+
+}
+
+
+%\pgfplotstableread[col sep=comma]\significanttokens
+%{\begin{table}[H]
+%\begin{tabular}{lccc}
+%Token	& SHAP Importance	& Importance Ratio	&Cumulative Importance\\
+%pussy	&1.52E+20	&0.011597357	&0.011597357\\
+%yeah	&1.50E+20	&0.011409099	&0.023006456\\
+%shut	&1.39E+20	&0.010571406	&0.033577862\\
+%baby	&1.36E+20	&0.01035701	&0.043934872\\
+%think	&1.32E+20	&0.010063695	&0.053998567\\
+%theyre	&1.31E+20	&0.009966109	&0.063964675\\
+%fight	&1.31E+20	&0.009953206	&0.073917882\\
+%company	&1.31E+20	&0.00994279	&0.083860672\\
+%slut	&1.30E+20	&0.00987091	&0.093731583\\
+%post	&1.29E+20	&0.009821987	&0.10355357\\
+%whore	&1.28E+20	&0.009767647	&0.113321217\\
+%ive	&1.25E+20	&0.009507433	&0.122828649\\
+%day	&1.24E+20	&0.009463085	&0.132291735\\
+%hell	&1.23E+20	&0.009391312	&0.141683047\\
+%ugly	&1.23E+20	&0.009367983	&0.15105103\\
+%vagina	&1.20E+20	&0.009117163	&0.160168192\\
+%just	&1.16E+20	&0.008808538	&0.16897673\\
+%yes	&1.16E+20	&0.008803525	&0.177780255\\
+%avoid	&1.14E+20	&0.008706518	&0.186486774\\
+%try	&1.11E+20	&0.008453925	&0.194940699\\
+%credit	&1.10E+20	&0.008387922	&0.203328621\\
+%talk	&1.08E+20	&0.008203196	&0.211531817\\
+%lady	&1.07E+20	&0.008165792	&0.219697609\\
+%turn	&1.06E+20	&0.008046845	&0.227744454\\
+%sidebar	&1.05E+20	&0.007960992	&0.235705446\\
+%wine	&1.04E+20	&0.007946101	&0.243651547\\
+%fucking	&1.04E+20	&0.007925325	&0.251576872\\
+%work	&1.03E+20	&0.007829009	&0.259405882\\
+%crap	&1.02E+20	&0.00776949	&0.267175371\\
+%rape	&1.02E+20	&0.007750375	&0.274925746\\
+%equality	&1.01E+20	&0.00770787	&0.282633616
+%feminism	&9.91E+19	&0.007545142	&0.290178758
+%raped	&9.90E+19	&0.007538047	&0.297716805
+%youre	&9.71E+19	&0.007398943	&0.305115748
+%far	&9.70E+19	&0.007384769	&0.312500518
+%making	&9.63E+19	&0.007338303	&0.319838821
+%little	&9.35E+19	&0.00712501	&0.32696383
+%sex	&9.28E+19	&0.007071986	&0.334035817
+%personality	&9.26E+19	&0.007054072	&0.341089889
+%commie	&9.23E+19	&0.007033974	&0.348123863
+%muslim	&9.15E+19	&0.006972573	&0.355096436
+%face	&9.08E+19	&0.006914016	&0.362010452
+%cunt	&9.01E+19	&0.006861818	&0.36887227
+%maybe	&8.93E+19	&0.006803824	&0.375676094
+%girl	&8.88E+19	&0.006765197	&0.382441291
+%bitch	&8.84E+19	&0.006732232	&0.389173523
+%liberty	&8.83E+19	&0.006723464	&0.395896987
+%kino	&8.61E+19	&0.006558171	&0.402455159
+%life	&8.58E+19	&0.006534524	&0.408989683
+%wtf	&8.56E+19	&0.006519265	&0.415508948
+%stop	&8.53E+19	&0.006499158	&0.422008106
+%dad	&8.51E+19	&0.00648262	&0.428490727
+%burning	&8.35E+19	&0.00635999	&0.434850717
+%sending	&8.28E+19	&0.006309773	&0.44116049
+%guess	&8.28E+19	&0.006304251	&0.447464741
+%guy	&8.25E+19	&0.006281729	&0.45374647
+%rapist	&8.11E+19	&0.006174027	&0.459920497
+%tbh	&7.85E+19	&0.005978712	&0.465899209
+%rule	&7.77E+19	&0.005915531	&0.471814741
+%care	&7.72E+19	&0.00587991	&0.47769465
+%run	&7.65E+19	&0.005824444	&0.483519094
+%dirty	&7.44E+19	&0.005668708	&0.489187802
+%islam	&7.09E+19	&0.005403979	&0.494591781
+%having	&6.82E+19	&0.005191589	&0.499783369
+%college	&6.79E+19	&0.005170076	&0.504953446
+%feminist	&6.69E+19	&0.005095849	&0.510049295
+%tell	&6.54E+19	&0.004980076	&0.51502937
+%make	&6.49E+19	&0.004942463	&0.519971833
+%come	&6.42E+19	&0.004890665	&0.524862498
+%role	&6.40E+19	&0.004878112	&0.52974061
+%way	&6.33E+19	&0.004818691	&0.534559301
+%whale	&6.11E+19	&0.004654881	&0.539214182
+%red	&6.11E+19	&0.004651301	&0.543865483
+%attractive	&5.99E+19	&0.00456091	&0.548426393
+%theyd	&5.90E+19	&0.004495814	&0.552922207
+%logic	&5.76E+19	&0.004390441	&0.557312648
+%white	&5.60E+19	&0.004265462	&0.56157811
+%liberal	&5.58E+19	&0.004252855	&0.565830965
+%forget	&5.54E+19	&0.004217032	&0.570047996
+%treat	&5.43E+19	&0.004138054	&0.57418605
+%trump	&5.42E+19	&0.004127679	&0.578313729
+%oppression	&5.29E+19	&0.004028614	&0.582342343
+%left	&5.29E+19	&0.004026521	&0.586368864
+%expect	&5.24E+19	&0.003994741	&0.590363605
+%funny	&5.24E+19	&0.003993434	&0.594357039
+%different	&5.15E+19	&0.003920632	&0.598277671
+%marriage	&5.10E+19	&0.003886988	&0.602164659
+%natural	&5.10E+19	&0.003884789	&0.606049449
+%hope	&5.09E+19	&0.003879683	&0.609929132
+%cuck	&4.98E+19	&0.003790988	&0.613720119
+%surprised	&4.98E+19	&0.003789728	&0.617509847
+%selfish	&4.93E+19	&0.003757711	&0.621267558
+%picture	&4.88E+19	&0.003718629	&0.624986187
+%wonder	&4.88E+19	&0.003714347	&0.628700533
+%getting	&4.78E+19	&0.003640755	&0.632341288
+%did	&4.73E+19	&0.003603683	&0.635944971
+%rt	&4.71E+19	&0.003587165	&0.639532136
+%dead	&4.67E+19	&0.003554567	&0.643086703
+%rest	&4.59E+19	&0.003493754	&0.646580456
+%suck	&4.58E+19	&0.003492374	&0.65007283
+%vote	&4.41E+19	&0.003359917	&0.653432747
+%course	&4.38E+19	&0.003339611	&0.656772358
+%number	&4.32E+19	&0.003289533	&0.660061891
+%idiot	&4.29E+19	&0.003267012	&0.663328903
+%hard	&4.15E+19	&0.003164864	&0.666493767
+%soros	&4.11E+19	&0.003130867	&0.669624634
+%report	&4.09E+19	&0.003113621	&0.672738255
+%begin	&4.08E+19	&0.00310809	&0.675846344
+%space	&4.08E+19	&0.003106193	&0.678952538
+%away	&4.07E+19	&0.003103771	&0.682056309
+%spend	&4.06E+19	&0.003089544	&0.685145853
+%ball	&4.04E+19	&0.003079942	&0.688225795
+%fucked	&3.98E+19	&0.003034011	&0.691259806
+%monkey	&3.96E+19	&0.003018159	&0.694277965
+%enemy	&3.96E+19	&0.003012849	&0.697290814
+%wait	&3.95E+19	&0.003012416	&0.70030323
+%wont	&3.89E+19	&0.002959643	&0.703262872
+%waiting	&3.86E+19	&0.00293831	&0.706201182
+%oh	&3.84E+19	&0.002928373	&0.709129555
+%send	&3.83E+19	&0.002914523	&0.712044078
+%id	&3.78E+19	&0.002880328	&0.714924406
+%going	&3.77E+19	&0.00287348	&0.717797886
+%wife	&3.74E+19	&0.002846304	&0.72064419
+%foid	&3.66E+19	&0.00279116	&0.723435351
+%thanks	&3.64E+19	&0.002776048	&0.726211399
+%thing	&3.60E+19	&0.002743179	&0.728954577
+%hate	&3.58E+19	&0.002730365	&0.731684943
+%place	&3.49E+19	&0.002658753	&0.734343696
+%current	&3.47E+19	&0.002644079	&0.736987775
+%easily	&3.45E+19	&0.002629239	&0.739617014
+%need	&3.41E+19	&0.002595253	&0.742212267
+%really	&3.28E+19	&0.002495756	&0.744708022
+%word	&3.26E+19	&0.002484101	&0.747192123
+%thank	&3.25E+19	&0.002477734	&0.749669857
+%say	&3.25E+19	&0.002477585	&0.752147442
+%lying	&3.25E+19	&0.00247323	&0.754620672
+%mean	&3.24E+19	&0.002467258	&0.75708793
+%female	&3.18E+19	&0.00242403	&0.75951196
+%state	&3.15E+19	&0.002398394	&0.761910354
+%men	&3.14E+19	&0.00238817	&0.764298524
+%actually	&3.13E+19	&0.00238286	&0.766681385
+%ground	&3.13E+19	&0.002380421	&0.769061806
+%12	&3.12E+19	&0.002379257	&0.771441063
+%deserve	&3.07E+19	&0.002338691	&0.773779754
+%exist	&3.06E+19	&0.002332154	&0.776111908
+%wouldnt	&3.02E+19	&0.002302743	&0.778414651
+%hang	&2.98E+19	&0.00226843	&0.780683081
+%reason	&2.97E+19	&0.002261818	&0.7829449
+%lmao	&2.94E+19	&0.002239492	&0.785184392
+%daily	&2.91E+19	&0.002215979	&0.787400371
+%stand	&2.87E+19	&0.002189835	&0.789590206
+%wall	&2.85E+19	&0.00216867	&0.791758876
+%youll	&2.82E+19	&0.00214816	&0.793907036
+%ha	&2.80E+19	&0.002133862	&0.796040898
+%fact	&2.80E+19	&0.002133205	&0.798174103
+%potential	&2.77E+19	&0.002109937	&0.800284039
+%damage	&2.76E+19	&0.002104673	&0.802388713
+%gender	&2.75E+19	&0.002091111	&0.804479824
+%agree	&2.74E+19	&0.002083488	&0.806563311
+%giving	&2.71E+19	&0.002063011	&0.808626322
+%trap	&2.71E+19	&0.0020627	&0.810689023
+%use	&2.70E+19	&0.002058378	&0.812747401
+%imagine	&2.69E+19	&0.002045583	&0.814792983
+%thats	&2.68E+19	&0.002044848	&0.816837831
+%art	&2.68E+19	&0.002043369	&0.8188812
+%ring	&2.66E+19	&0.002023186	&0.820904386
+%lot	&2.62E+19	&0.001997964	&0.82290235
+%matter	&2.62E+19	&0.001994229	&0.824896579
+%smart	&2.61E+19	&0.001989037	&0.826885616
+%chance	&2.61E+19	&0.001987294	&0.82887291
+%inside	&2.60E+19	&0.001980332	&0.830853242
+%difference	&2.59E+19	&0.001974185	&0.832827427
+%shes	&2.58E+19	&0.001964099	&0.834791526
+%trying	&2.56E+19	&0.001952458	&0.836743984
+%user	&2.54E+19	&0.00193489	&0.838678874
+%want	&2.53E+19	&0.001926382	&0.840605256
+%cope	&2.51E+19	&0.00191412	&0.842519376
+%future	&2.51E+19	&0.001910445	&0.84442982
+%got	&2.50E+19	&0.001901798	&0.846331618
+%mom	&2.50E+19	&0.001900934	&0.848232552
+%rich	&2.44E+19	&0.001854908	&0.85008746
+%femininity	&2.42E+19	&0.001844187	&0.851931647
+%friend	&2.41E+19	&0.001838459	&0.853770106
+%instead	&2.40E+19	&0.001831813	&0.855601919
+%clinton	&2.39E+19	&0.001818722	&0.857420641
+%boring	&2.35E+19	&0.00179285	&0.859213491
+%immediately	&2.32E+19	&0.001768233	&0.860981724
+%plan	&2.31E+19	&0.001762243	&0.862743967
+%working	&2.31E+19	&0.001756312	&0.864500279
+%sister	&2.30E+19	&0.001754666	&0.866254945
+%toe	&2.28E+19	&0.00173363	&0.867988575
+%behavior	&2.27E+19	&0.001728869	&0.869717445
+%blame	&2.27E+19	&0.001728107	&0.871445552
+%bos	&2.24E+19	&0.001706744	&0.873152296
+%fought	&2.23E+19	&0.00169495	&0.874847246
+%dick	&2.23E+19	&0.001694809	&0.876542055
+%feminine	&2.20E+19	&0.001679183	&0.878221238
+%mgtow	&2.18E+19	&0.001661041	&0.879882279
+%mother	&2.14E+19	&0.001631508	&0.881513787
+%thinking	&2.14E+19	&0.001628454	&0.883142241
+%american	&2.13E+19	&0.001621936	&0.884764176
+%bang	&2.09E+19	&0.001594263	&0.886358439
+%self	&2.08E+19	&0.001588131	&0.88794657
+%problem	&2.08E+19	&0.0015874	&0.88953397
+%male	&2.06E+19	&0.001568281	&0.891102251
+%young	&2.04E+19	&0.001553795	&0.892656046
+%jew	&2.04E+19	&0.001553485	&0.894209531
+%worst	&2.03E+19	&0.00155	&0.895759532
+%attention	&2.03E+19	&0.001547041	&0.897306573
+%said	&2.01E+19	&0.00153012	&0.898836692
+%start	&2.00E+19	&0.001524277	&0.900360969
+%shit	&2.00E+19	&0.001524101	&0.90188507
+%black	&1.98E+19	&0.001509878	&0.903394948
+%waste	&1.98E+19	&0.001504699	&0.904899647
+%fuck	&1.96E+19	&0.001489175	&0.906388822
+%kavanaugh	&1.94E+19	&0.001478046	&0.907866868
+%lol	&1.93E+19	&0.00147228	&0.909339149
+%le	&1.93E+19	&0.001472101	&0.910811249
+%wild	&1.93E+19	&0.001470344	&0.912281594
+%lead	&1.88E+19	&0.001433345	&0.913714938
+%virgin	&1.82E+19	&0.001385813	&0.915100751
+%realize	&1.80E+19	&0.001372638	&0.916473389
+%dont	&1.79E+19	&0.001363864	&0.917837253
+%hanging	&1.77E+19	&0.001347296	&0.919184549
+%typical	&1.74E+19	&0.001327787	&0.920512337
+%die	&1.73E+19	&0.001320059	&0.921832396
+%given	&1.73E+19	&0.001319831	&0.923152227
+%west	&1.69E+19	&0.001289557	&0.924441784
+%believe	&1.67E+19	&0.001270129	&0.925711913
+%super	&1.64E+19	&0.001251636	&0.926963549
+%doe	&1.59E+19	&0.001211612	&0.92817516
+%hold	&1.57E+19	&0.001199464	&0.929374624
+%maga	&1.57E+19	&0.001195896	&0.93057052
+%end	&1.57E+19	&0.001195419	&0.931765939
+%lonely	&1.51E+19	&0.00114977	&0.932915709
+%voter	&1.50E+19	&0.001144648	&0.934060357
+%incel	&1.48E+19	&0.001125631	&0.935185989
+%probably	&1.44E+19	&0.001095881	&0.936281869
+%plot	&1.40E+19	&0.001065488	&0.937347357
+%leg	&1.40E+19	&0.001064836	&0.938412193
+%loser	&1.37E+19	&0.001046087	&0.93945828
+%watch	&1.37E+19	&0.001042257	&0.940500537
+%sexual	&1.37E+19	&0.001041341	&0.941541878
+%wow	&1.33E+19	&0.001010428	&0.942552306
+%money	&1.32E+19	&0.001006632	&0.943558939
+%killed	&1.27E+19	&0.000970146	&0.944529084
+%lulz	&1.23E+19	&0.000933983	&0.945463067
+%cost	&1.22E+19	&0.000925955	&0.946389022
+%support	&1.21E+19	&0.000922948	&0.947311971
+%reply	&1.21E+19	&0.00091956	&0.948231531
+%willing	&1.19E+19	&0.000906234	&0.949137764
+%\end{tabular}
+%\end{table}}
+
+
+%\end{document}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{adjustwidth}{-\extralength}{0cm}
+%\printendnotes[custom] % Un-comment to print a list of endnotes
+
+\reftitle{\highlighting{References} %MDPI: 1.	Please do NOT change the reference format with EndNote and other tools. Our production editor has done thoroughly layout work for the reference. Thanks for your cooperation.2.	Please DO NOT delete or add any reference during proofreading stage since paper has been accepted
+}
+
+% Please provide either the correct journal abbreviation (e.g., according to the “List of Title Word Abbreviations” http://www.issn.org/services/online-services/access-to-the-ltwa/) or the full name of the journal.
+% Citations and References in Supplementary files are permitted provided that they also appear in the reference list here. 
+
+%=====================================
+% References, variant A: external bibliography
+%=====================================
+
+\begin{thebibliography}{999}
+
+\bibitem[Kurasawa et~al.(2021)Kurasawa, Rondinelli, and
+  Kilicaslan]{kurasawa2021evidentiary}
+Kurasawa, F.; Rondinelli, E.; Kilicaslan, G.
+\newblock Evidentiary activism in the digital age: On the rise of feminist
+  struggles against gender-based online violence.
+\newblock {\em Inf. Commun. Soc.} {\bf 2021}, {\em
+  24},~2174--2194.
+
+\bibitem[Papaevangelou(2023)]{papaevangelou2023non}
+Papaevangelou, C.
+\newblock ‘The non-interference principle’: Debating online platforms’
+  treatment of editorial content in the European Union's Digital Services Act.
+\newblock {\em Eur. J. Commun.} {\bf 2023}, {\em
+  38},~466--483.
+
+\bibitem[Ortiz(2023)]{ortiz2023if}
+Ortiz, S.M.
+\newblock “If Something Ever Happened, I’d Have No One to Tell:” how
+  online sexism perpetuates young women’s silence.
+\newblock {\em Fem. Media Stud.} {\bf 2023}, \hl{\emph{ }24, 119--134}.%MDPI: Newly added volume and pagination, please confirm. 
+
+\bibitem[Aldana-Bobadilla et~al.(2021)Aldana-Bobadilla, Molina-Villegas,
+  Montelongo-Padilla, Lopez-Arevalo, and S.~Sordia]{aldana2021language}
+Aldana-Bobadilla, E.; Molina-Villegas, A.; Montelongo-Padilla, Y.;
+  Lopez-Arevalo, I.; S.~Sordia, O.
+\newblock A language model for misogyny detection in Latin American Spanish
+  driven by multisource feature extraction and transformers.
+\newblock {\em Appl. Sci.} {\bf 2021}, {\em 11},~10467.
+
+\bibitem[Lee et~al.(2022)Lee, Liang, Cheng, Tang, and Yuen]{lee2022affordances}
+Lee, F.L.; Liang, H.; Cheng, E.W.; Tang, G.K.; Yuen, S.
+\newblock Affordances, movement dynamics, and a centralized digital
+  communication platform in a networked movement.
+\newblock {\em Inf. Commun. Soc.} {\bf 2022}, {\em
+  25},~1699--1716.
+
+\bibitem[Feng(2021)]{feng2021simple}
+Feng, C.
+\newblock A simple voting mechanism for online sexist content identification.
+\newblock {\em arXiv} {\bf 2021}, arXiv:2105.14309.
+
+\bibitem[Sch{\"u}tz et~al.()Sch{\"u}tz, Boeck, Liakhovets, Slijepcevic,
+  Kirchknopf, Hecht, Bogensperger, Schlarb, Schindler, and
+  Zeppelzauer]{schutz2106automatic}
+Sch{\"u}tz, M.; Boeck, J.; Liakhovets, D.; Slijepcevic, D.; Kirchknopf, A.;
+  Hecht, M.; Bogensperger, J.; Schlarb, S.; Schindler, A.; Zeppelzauer, M.
+\newblock Automatic Sexism Detection with Multilingual Transformer Models, CoRR
+  abs/2106.04908. 2021.  Available online:  \url{https://arxiv.org/abs/2106.04908}  (\hl{accessed on 8 February 2022}). %MDPI: Please add the access date (format: Date Month Year), e.g., accessed on 1 January 2020.
+
+
+\bibitem[Kumar et~al.(2021)Kumar, Pal, and Pamula]{kumar2021sexism}
+Kumar, R.; Pal, S.; Pamula, R.
+\newblock Sexism Detection in English and Spanish Tweets.
+\newblock In {Proceedings of the IberLEF@ SEPLN};  2021; pp.~500--505.  Available online:  \url{https://ceur-ws.org/Vol-2943/exist_paper17.pdf} \hl{(accessed on 1 September 2021).}%MDPI: 1. We couldn't find more, so we added web link, please confirm; 2. Please add the access date (format: Date Month Year), e.g., accessed on 1 January 2020.
+
+\bibitem[de~Paula et~al.(2021)de~Paula, da~Silva, and Schlicht]{de2021sexism}
+de~Paula, A.F.M.; da~Silva, R.F.; Schlicht, I.B.
+\newblock Sexism prediction in spanish and english tweets using monolingual and
+  multilingual bert and ensemble models.
+\newblock {\em arXiv} {\bf 2021}, arXiv:2111.04551.
+
+\bibitem[Altin and Saggion(2021)]{altin2021automatic}
+Altin, L.S.M.; Saggion, H.
+\newblock Automatic detection of sexism in social media with a multilingual
+  approach.
+\newblock In Proceedings of the Iberian Languages Evaluation
+  Forum (IberLEF 2021),  M{\'a}laga, Espanya, 21 September 2021; [M{\'a}laga]: CEUR
+  Workshop Proceedings Series; CEUR Workshop Proceedings: \hl{Aachen, Germany}, %MDPI: Newly added information. Please confirm. same as below
+~2021; pp. 415--419. 
+
+\bibitem[Mehta and Passi(2022)]{mehta2022social}
+Mehta, H.; Passi, K.
+\newblock Social media hate speech detection using explainable artificial
+  intelligence (XAI).
+\newblock {\em Algorithms} {\bf 2022}, {\em 15},~291.
+
+\bibitem[Gil~Bermejo et~al.(2021)Gil~Bermejo, Martos~S{\'a}nchez,
+  V{\'a}zquez~Aguado, and Garc{\'\i}a-Navarro]{gil2021adolescents}
+Gil~Bermejo, J.L.; Martos~S{\'a}nchez, C.; V{\'a}zquez~Aguado, O.;
+  Garc{\'\i}a-Navarro, E.B.
+\newblock Adolescents, ambivalent sexism and social networks, a conditioning
+  factor in the healthcare of women.
+\newblock \emph{Healthcare} \textbf{2021}, \emph{9}, 721.
+
+\bibitem[Hoofnagle et~al.(2019)Hoofnagle, Van Der~Sloot, and
+  Borgesius]{hoofnagle2019european}
+Hoofnagle, C.J.; Van Der~Sloot, B.; Borgesius, F.Z.
+\newblock The European Union general data protection regulation: What it is and
+  what it means.
+\newblock {\em Inf. Commun. Technol. Law} {\bf 2019}, {\em
+  28},~65--98.
+
+\bibitem[Mathew et~al.(2021)Mathew, Saha, Yimam, Biemann, Goyal, and
+  Mukherjee]{mathew2021hatexplain}
+Mathew, B.; Saha, P.; Yimam, S.M.; Biemann, C.; Goyal, P.; Mukherjee, A.
+\newblock Hatexplain: A benchmark dataset for explainable hate speech
+  detection.
+\newblock In Proceedings of the AAAI Conference on
+  Artificial Intelligence,  \hl{Vancouver, BC, Canada, 2--9 February}%MDPI: We added conference location and date, please confirm. Same as below.
+  ~2021; Volume~35, pp. 14867--14875.
+
+\bibitem[Velankar et~al.(2022)Velankar, Patil, and Joshi]{velankar2022review}
+Velankar, A.; Patil, H.; Joshi, R.
+\newblock A review of challenges in machine learning based automated hate
+  speech detection.
+\newblock {\em arXiv} {\bf 2022}, arXiv:2209.05294.
+
+\bibitem[Jiang(2020)]{jiang2020identifying}
+Jiang, J.A.
+\newblock Identifying and addressing design and policy challenges in online
+  content moderation.
+\newblock In Proceedings of the Extended Abstracts of the 2020 CHI Conference
+  on Human Factors in Computing Systems, \hl{Honolulu, HI, USA,  25--30 April} 2020; pp. 1--7.
+
+\bibitem[Danilevsky et~al.(2020)Danilevsky, Qian, Aharonov, Katsis, Kawas, and
+  Sen]{danilevsky2020survey}
+Danilevsky, M.; Qian, K.; Aharonov, R.; Katsis, Y.; Kawas, B.; Sen, P.
+\newblock A survey of the state of explainable AI for natural language
+  processing.
+\newblock {\em arXiv} {\bf 2020}, arXiv:2010.00711.
+
+\bibitem[S{\o}gaard(2021)]{sogaard2021explainable}
+S{\o}gaard, A.
+\newblock {\em Explainable Natural Language Processing}; Morgan \& Claypool
+  Publishers: \hl{San Rafael, CA, USA},  2021.
+
+\bibitem[Mohammadi et~al.(2023)Mohammadi, Giachanou, and
+  Bagheri]{mohammadi2023towards}
+Mohammadi, H.; Giachanou, A.; Bagheri, A.
+\newblock Towards robust online sexism detection: A multi-model approach with
+  BERT, XLM-RoBERTa, and DistilBERT for EXIST 2023 Tasks.
+\newblock In \highlighting{{\em Working Notes of the Conference and Labs of the Evaluation Forum (CLEF 2023)};}  \hl{CEUR Workshop Proceedings: Aachen, Germany}, 2023.%MDPI: We corrected the book title and added publisher and its location, please confirm. 
+
+\bibitem[B{\"o}ck et~al.(2023)B{\"o}ck, Sch{\"u}tz, Liakhovets, Satriani,
+  Babic, Slijep{\v{c}}evi{\'c}, Zeppelzauer, and Schindler]{bock2023ait_fhstp}
+B{\"o}ck, J.; Sch{\"u}tz, M.; Liakhovets, D.; Satriani, N.Q.; Babic, A.;
+  Slijep{\v{c}}evi{\'c}, D.; Zeppelzauer, M.; Schindler, A.
+\newblock AIT\_FHSTP at EXIST 2023 benchmark: Sexism detection by transfer
+  learning, sentiment and toxicity embeddings and hand-crafted features.
+\newblock In {\em Working Notes of CLEF};14th International Conference of the CLEF Association, CLEF 2023, Thessaloniki, Greece \hl{2023}. %MDPI: Please add the name of the publisher and their location.
+
+
+\bibitem[Daouadi et~al.(2023)Daouadi, Boualleg, and Guehairia]{daouadi2023deep}
+Daouadi, K.E.; Boualleg, Y.; Guehairia, O.
+\newblock Deep Random Forest and AraBert for Hate Speech Detection from Arabic
+  Tweets.
+\newblock {\em J. Univers. Comput. Sci.} {\bf 2023}, {\em
+  29},~1319--1335.
+
+\bibitem[Lopez-Lopez et~al.(2021)Lopez-Lopez, Carrillo-de Albornoz, and
+  Plaza]{lopez2021combining}
+Lopez-Lopez, E.; Carrillo-de Albornoz, J.; Plaza, L.
+\newblock Combining Transformer-Based Models with Traditional Machine Learning
+  Approaches for Sexism Identification in Social Networks at EXIST 2021.
+\newblock In Proceedings of the IberLEF@ SEPLN;  2021;~pp. 431--441.  Available online:  \url{https://ceur-ws.org/Vol-2943/exist_paper10.pdf} \hl{(accessed on 1 September 2021,).} %MDPI: 1. We couldn't find more, so we added web link according to doi, please confirm; 2. Please add the access date (format: Date Month Year), e.g., accessed on 1 January 2020.
+
+\bibitem[Samory et~al.(2021)Samory, Sen, Kohne, Fl{\"o}ck, and
+  Wagner]{samory2021call}
+Samory, M.; Sen, I.; Kohne, J.; Fl{\"o}ck, F.; Wagner, C.
+\newblock “Call me sexist, but...”: Revisiting Sexism Detection Using
+  Psychological Scales and Adversarial Samples.
+\newblock In Proceedings of the International AAAI
+  Conference on Web and sOcial Media,  \hl{Online, 7--10 June} 2021; Volume~15, pp. 573--584.
+
+\bibitem[Rodríguez‐Sánchez et~al.(2020)Rodríguez‐Sánchez, de~Albornoz,
+  and Plaza]{Rodríguez‐Sánchez2020Automatic}
+Rodríguez‐Sánchez, F.; de~Albornoz, J.C.; Plaza, L.
+\newblock Automatic Classification of Sexism in Social Networks: An Empirical
+  Study on Twitter Data.
+\newblock {\em IEEE Access} {\bf 2020}, {\em 8},~219563--219576.
+\newblock {\url{https://doi.org/10.1109/ACCESS.2020.3042604}}.
+
+\bibitem[Jha and Mamidi(2017)]{Jha2017When}
+Jha, A.; Mamidi, R.
+\newblock When Does a Compliment Become Sexist? Analysis and Classification of
+  Ambivalent Sexism Using Twitter Data. {\bf 2017}; pp. 7--16.  Available online:  \url{https://aclanthology.org/W17-2902/ } \hl{(accessed on 3 August 2017.).} %MDPI: 1. We couldn't find more, so we added web link according to doi, please confirm; 2. Please add the access date (format: Date Month Year), e.g., accessed on 1 January 2020.
+\newblock {\url{https://doi.org/10.18653/v1/W17-2902}}.
+
+\bibitem[Jiang et~al.(2022)Jiang, Yang, Liu, and Zubiaga]{jiang2022swsr}
+Jiang, A.; Yang, X.; Liu, Y.; Zubiaga, A.
+\newblock SWSR: A Chinese dataset and lexicon for online sexism detection.
+\newblock {\em Online Soc. Netw. Media} {\bf 2022}, {\em 27},~100182.
+
+\bibitem[Das et~al.(2023)Das, Rahgouy, Zhang, Bhattacharya, Dozier, and
+  Seals]{das2023online}
+Das, A.; Rahgouy, M.; Zhang, Z.; Bhattacharya, T.; Dozier, G.; Seals, C.D.
+\newblock Online Sexism Detection and Classification by Injecting User Gender
+  Information.
+\newblock In Proceedings of the 2023 IEEE International Conference on
+  Artificial Intelligence, Blockchain, and Internet of Things (AIBThings), \hl{Mount Pleasant, MI, USA, 16--17 September} 2023;  IEEE: \hl{Piscataway, NJ, USA}, 2023; pp. 1--5.
+
+\bibitem[Kirk et~al.(2023)Kirk, Yin, Vidgen, and Röttger]{kirkSemEval2023}
+\hl{Kirk, H.R.; Yin, W.; Vidgen, B.; Röttger, P.}
+\newblock \hl{SemEval-2023 Task 10: Explainable Detection of Online Sexism.}
+\newblock \hl{In Proceedings of the} \hl{17th International
+  Workshop on Semantic Evaluation (SemEval-2023). Association for
+  Computational Linguistics,} \hl{Toronto, ON, Canada, 9--14 July}%MDPI:Newly added information, please confirm.
+  ~\hl{2023}.%MDPI: Refs. 28 and 40 are duplicated. Please remove duplicated references and rearrange all the references to appear in numerical order. Please ensure that there are no duplicated references.
+\newblock {\url{https://doi.org/10.48550/arXiv.2303.04222}}.
+
+\bibitem[Tasneem et~al.(2023)Tasneem, Hossain, and
+  Naim]{tasneem2023kingsmantrio}
+Tasneem, F.; Hossain, T.; Naim, J.
+\newblock KingsmanTrio at SemEval-2023 Task 10: Analyzing the Effectiveness of
+  Transfer Learning Models for Explainable Online Sexism Detection.
+\newblock In Proceedings of the Proceedings of the 17th International
+  Workshop on Semantic Evaluation (SemEval-2023),  \hl{Toronto, ON, Canada, 31 January} 2023; pp. 1916--1920.
+
+\bibitem[Kiritchenko et~al.(2021)Kiritchenko, Nejadgholi, and
+  Fraser]{kiritchenko2021confronting}
+Kiritchenko, S.; Nejadgholi, I.; Fraser, K.C.
+\newblock Confronting abusive language online: A survey from the ethical and
+  human rights perspective.
+\newblock {\em J. Artif. Intell. Res.} {\bf 2021}, {\em
+  71},~431--478.
+
+\bibitem[Lamsiyah et~al.(2023)Lamsiyah, El~Mahdaouy, Alami, Berrada, and
+  Schommer]{lamsiyah2023ul}
+Lamsiyah, S.; El~Mahdaouy, A.; Alami, H.; Berrada, I.; Schommer, C.
+\newblock UL \& UM6P at SemEval-2023 Task 10: Semi-Supervised Multi-task
+  Learning for Explainable Detection of Online Sexism.
+\newblock In Proceedings of the 17th International
+  Workshop on Semantic Evaluation (SemEval-2023),  \hl{Toronto, ON, Canada, 31 January} 2023; pp. 644--650.
+
+\bibitem[Kotapati et~al.(2023)Kotapati, Gandhimathi, Rao, Muppagowni, Bindu,
+  and Reddy]{kotapati2023natural}
+Kotapati, G.; Gandhimathi, S.K.; Rao, P.A.; Muppagowni, G.K.; Bindu, K.R.;
+  Reddy, M.S.C.
+\newblock A Natural Language Processing for Sentiment Analysis from Text using
+  Deep Learning Algorithm.
+\newblock In Proceedings of the 2023 2nd International Conference on Edge
+  Computing and Applications (ICECAA), \hl{Namakkal, India, 19--21 July 2023}; IEEE: \hl{Piscataway, NJ, USA},  2023; pp. 1028--1034.
+
+\bibitem[Chauhan et~al.(2023)Chauhan, Gusain, Kumar, Bhatt, and
+  Uniyal]{chauhan2023fine}
+Chauhan, R.; Gusain, A.; Kumar, P.; Bhatt, C.; Uniyal, I.
+\newblock Fine Grained Sentiment Analysis using Machine Learning and Deep
+  Learning.
+\newblock In Proceedings of the 2023 International Conference on Sustainable
+  Emerging Innovations in Engineering and Technology (ICSEIET), \hl{Ghaziabad, India, 14--15 September 2023}; IEEE: \hl{Piscataway, NJ, USA},  2023,
+  pp. 423--427.
+
+\bibitem[Mariappan et~al.(2023)Mariappan, Balakrishnan, Subhashini, Kumar, Rao,
+  and Alagusundar]{mariappan2023sentiment}
+Mariappan, U.; Balakrishnan, D.; Subhashini, S.; Kumar, N.V.A.S.; Rao,
+  S.L.S.M.; Alagusundar, N.
+\newblock Sentiment and Context-Aware Recurrent Convolutional Neural Network
+  for Sentiment Analysis.
+\newblock In Proceedings of the 2023 3rd Asian Conference on Innovation in
+  Technology (ASIANCON), \hl{Pune, India, 25--27 August 2023}; IEEE: \hl{Piscataway, NJ, USA}, 2023; pp. 1--6.
+
+\bibitem[Lundberg and Lee(2017)]{lundberg2017unified}
+Lundberg, S.M.; Lee, S.I.
+\newblock A unified approach to interpreting model predictions.
+\newblock {\em Adv. Neural Inf. Process. Syst.} {\bf 2017},
+  {\em 30}, \hl{4765--4774} %MDPI: Newly added  information. Please confirm.
+.
+
+\bibitem[Ribeiro et~al.(2016)Ribeiro, Singh, and Guestrin]{ribeiro2016should}
+Ribeiro, M.T.; Singh, S.; Guestrin, C.
+\newblock ``Why should i trust you?'' Explaining the predictions of any
+  classifier.
+\newblock In Proceedings of the 22nd ACM SIGKDD
+  International Conference on Knowledge Discovery and Data Mining,  \hl{San Francisco, CA, USA, 13--17 August} 2016; pp.~1135--1144.
+
+\bibitem[Lai et~al.(2022)Lai, Carton, Bhatnagar, Liao, Zhang, and
+  Tan]{lai2022human}
+Lai, V.; Carton, S.; Bhatnagar, R.; Liao, Q.V.; Zhang, Y.; Tan, C.
+\newblock Human-ai collaboration via conditional delegation: A case study of
+  content moderation.
+\newblock In Proceedings of the 2022 CHI Conference on Human
+  Factors in Computing Systems, \hl{New Orleans, LA, USA, 29 April--5 May} 2022; pp. 1--18.
+
+\bibitem[Molina and Sundar(2022)]{molina2022ai}
+Molina, M.D.; Sundar, S.S.
+\newblock When AI moderates online content: Effects of human collaboration and
+  interactive transparency on user trust.
+\newblock {\em J. Comput.-Mediat. Commun.} {\bf 2022}, {\em
+  27},~zmac010.
+
+\bibitem[Rallabandi et~al.(2023)Rallabandi, Kakodkar, and
+  Avuku]{rallabandi2023ethical}
+Rallabandi, S.; Kakodkar, I.G.; Avuku, O.
+\newblock Ethical U se of AI in Social Media.
+\newblock In Proceedings of the 2023 International Workshop on Intelligent
+  Systems (IWIS), \hl{Ulsan, Republic of Korea, 9--11 August 2023}; IEEE: \hl{Piscataway, NJ, USA}, 2023; pp. 1--9.
+
+%\bibitem[Kirk et~al.(2023)Kirk, Yin, Vidgen, and R{\"o}ttger]{kirk2023semeval}
+%\hl{Kirk, H.R.; Yin, W.; Vidgen, B.; R{\"o}ttger, P.}
+%\newblock \hl{SemEval-2023 Task 10: Explainable Detection of Online Sexism.}
+&\newblock \hl{{\em arXiv} {\bf 2023}, arXiv:2303.04222.}
+
+\bibitem[Beddiar et~al.(2021)Beddiar, Jahan, and Oussalah]{beddiar2021data}
+Beddiar, D.R.; Jahan, M.S.; Oussalah, M.
+\newblock Data expansion using back translation and paraphrasing for hate
+  speech detection.
+\newblock {\em Online Soc. Netw. Media} {\bf 2021}, {\em 24},~100153.
+
+\bibitem[Zheng et~al.(2015)Zheng, Cai, and Li]{zheng2015oversampling}
+Zheng, Z.; Cai, Y.; Li, Y.
+\newblock Oversampling method for imbalanced classification.
+\newblock {\em Comput. Inform.} {\bf 2015}, {\em 34},~1017--1037.
+
+\bibitem[Xu and Vaziri-Pashkam(2021)]{xu2021limits}
+Xu, Y.; Vaziri-Pashkam, M.
+\newblock Limits to visual representational correspondence between
+  convolutional neural networks and the human brain.
+\newblock {\em Nat. Commun.} {\bf 2021}, {\em 12},~2065.
+
+\bibitem[Devlin et~al.(2018)Devlin, Chang, Lee, and Toutanova]{devlin2018bert}
+Devlin, J.; Chang, M.W.; Lee, K.; Toutanova, K.
+\newblock Bert: Pre-training of deep bidirectional transformers for language
+  understanding.
+\newblock {\em arXiv} {\bf 2018}, arXiv:1810.04805.
+
+\bibitem[Conneau et~al.(2019)Conneau, Khandelwal, Goyal, Chaudhary, Wenzek,
+  Guzm{\'a}n, Grave, Ott, Zettlemoyer, and Stoyanov]{conneau2019unsupervised}
+Conneau, A.; Khandelwal, K.; Goyal, N.; Chaudhary, V.; Wenzek, G.; Guzm{\'a}n,
+  F.; Grave, E.; Ott, M.; Zettlemoyer, L.; Stoyanov, V.
+\newblock Unsupervised cross-lingual representation learning at scale.
+\newblock {\em arXiv} {\bf 2019}, arXiv:1911.02116.
+
+\bibitem[Sanh et~al.(2019)Sanh, Debut, Chaumond, and Wolf]{sanh2019distilbert}
+Sanh, V.; Debut, L.; Chaumond, J.; Wolf, T.
+\newblock DistilBERT, a distilled version of BERT: Smaller, faster, cheaper and
+  lighter.
+\newblock {\em arXiv} {\bf 2019}, arXiv:1910.01108.
+
+\bibitem[Prabha and Srikanth(2019)]{prabha2019survey}
+Prabha, M.I.; Srikanth, G.U.
+\newblock Survey of sentiment analysis using deep learning techniques.
+\newblock In Proceedings of the 2019 1st International Conference on
+  Innovations in Information and Communication Technology (ICIICT), \hl{Chennai, India, 25--26 April 2019}; IEEE: \hl{Piscataway, NJ, USA},
+  2019, pp. 1--9.
+
+\bibitem[Mohammadi et~al.(2023)Mohammadi, Giachanou, and
+  Bagheri]{hadi_mohammadi_2023_8144300}
+Mohammadi, H.; Giachanou, A.; Bagheri, A.
+\newblock {Code for ``Towards Robust Online Sexism Detection: A Multi-Model
+  Approach with BERT, XLM-RoBERTa, and DistilBERT for EXIST 2023 Tasks''},
+  2023.  Available online:  \url{https://zenodo.org/records/8144300}  \hl{(accessed on 13 July 2023).} %MDPI: 1. We couldn't find more, so we added web link according to doi, please confirm; 2. Please add the access date (format: Date Month Year), e.g., accessed on 1 January 2020.
+\newblock {\url{https://doi.org/10.5281/zenodo.8144300}}.
+
+\bibitem[Kingma and Ba(2014)]{kingma2014adam}
+Kingma, D.P.; Ba, J.
+\newblock Adam: A method for stochastic optimization.
+\newblock {\em arXiv} {\bf 2014}, arXiv:1412.6980.
+
+\bibitem[Brownlee(2018)]{brownlee2018gentle}
+Brownlee, J.
+\newblock A gentle introduction to early stopping to avoid overtraining neural
+  networks.
+\newblock {\em Mach. Learn. Mastery} {\bf 2018}, \hl{{\em 7}.} %MDPI: Please add the page number, or doi information.
+
+
+\end{thebibliography}
+
+
+%=====================================
+% References, variant B: internal bibliography
+%=====================================
+%\begin{thebibliography}{999}
+% Reference 1
+%\bibitem[Author1(year)]{ref-journal}
+%Author~1, T. The title of the cited article. {\em Journal Abbreviation} {\bf 2008}, {\em 10}, 142--149.
+% Reference 2
+
+%\end{thebibliography}
+
+
+% If authors have biography, please use the format below
+%\section*{Short Biography of Authors}
+%\bio
+%{\raisebox{-0.35cm}{\includegraphics[width=3.5cm,height=5.3cm,clip,keepaspectratio]{Definitions/author1.pdf}}}
+%{\textbf{Firstname Lastname} Biography of first author}
+%
+%\bio
+%{\raisebox{-0.35cm}{\includegraphics[width=3.5cm,height=5.3cm,clip,keepaspectratio]{Definitions/author2.jpg}}}
+%{\textbf{Firstname Lastname} Biography of second author}
+
+% For the MDPI journals use author-date citation, please follow the formatting guidelines on http://www.mdpi.com/authors/references
+% To cite two works by the same author: \citeauthor{ref-journal-1a} (\citeyear{ref-journal-1a}, \citeyear{ref-journal-1b}). This produces: Whittaker (1967, 1975)
+% To cite two works by the same author with specific pages: \citeauthor{ref-journal-3a} (\citeyear{ref-journal-3a}, p. 328; \citeyear{ref-journal-3b}, p.475). This produces: Wong (1999, p. 328; 2000, p. 475)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% for journal Sci
+%\reviewreports{\\
+%Reviewer 1 comments and authors’ response\\
+%Reviewer 2 comments and authors’ response\\
+%Reviewer 3 comments and authors’ response
+%}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\PublishersNote{}
+\end{adjustwidth}
+\end{document}
+
