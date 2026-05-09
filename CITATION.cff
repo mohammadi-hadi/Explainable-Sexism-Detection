@@ -3,8 +3,7 @@ message: "If you use this code or data, please cite both the paper and this soft
 title: "A Transparent Pipeline for Online Sexism Detection Based on the Combination of Explainable Artificial Intelligence, Feature Selection, and Ensemble Learning"
 type: software
 version: "v1.0-thesis"
-date-released: "2026-05-08"
-doi: "10.5281/zenodo.20090476"
+date-released: "2026-05-09"
 license: CC-BY-4.0
 repository-code: "https://github.com/mohammadi-hadi/Explainable-Sexism-Detection"
 authors:
