@@ -2,7 +2,7 @@
 
 # A Transparent Pipeline for Identifying Sexism in Social Media
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20090476.svg)](https://doi.org/10.5281/zenodo.20090476)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20091834.svg)](https://doi.org/10.5281/zenodo.20091834)
 [![Applied Sciences 2024](https://img.shields.io/badge/Applied%20Sciences%202024-blue.svg)](https://doi.org/10.3390/app14198620)
 [![License: CC-BY-4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](LICENSE)
 
@@ -19,7 +19,7 @@
 | **Affiliation**  | Utrecht University, The Netherlands |
 | **Venue**        | Applied Sciences, 14(19), 8620 |
 | **DOI (paper)**  | [10.3390/app14198620](https://doi.org/10.3390/app14198620) |
-| **Code archive** | [10.5281/zenodo.20090476](https://doi.org/10.5281/zenodo.20090476) (this repository, snapshot v1.0-thesis) |
+| **Code archive** | [10.5281/zenodo.20091834](https://doi.org/10.5281/zenodo.20091834) (this repository, snapshot v1.0-thesis) |
 
 > This repository accompanies **Chapter 3** of the PhD thesis
 > *Let Me Explain! Explainable NLP for Understanding Large Language Models* (Hadi Mohammadi, Utrecht University, 2026).
@@ -47,8 +47,8 @@ If you use this code or data, please cite **both** the paper and this code archi
   year      = {2026},
   publisher = {Zenodo},
   version   = {v1.0-thesis},
-  doi       = {10.5281/zenodo.20090476},
-  url       = {https://doi.org/10.5281/zenodo.20090476}
+  doi       = {10.5281/zenodo.20091834},
+  url       = {https://doi.org/10.5281/zenodo.20091834}
 }
 ```
 
