@@ -74,7 +74,6 @@ Explainable-Sexism-Detection/
 ├── LICENSE
 ├── CITATION.cff
 ├── CONTRIBUTING.md
-├── paper.pdf                                     # Published Applied Sciences (2024) paper
 ├── code/
 │   └── custom_model.py                           # Multilingual BERT + XLM-R + DistilBERT ensemble
 ├── notebooks/
@@ -126,7 +125,6 @@ Explainable-Sexism-Detection/
 ```bash
 git clone https://github.com/mohammadi-hadi/Explainable-Sexism-Detection.git
 cd Explainable-Sexism-Detection
-open paper.pdf                      # macOS; or use any PDF viewer
 
 # To run the analysis notebooks
 pip install pandas numpy torch transformers scikit-learn shap matplotlib seaborn
