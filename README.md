@@ -3,8 +3,8 @@
 # A Transparent Pipeline for Identifying Sexism in Social Media
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20091834.svg)](https://doi.org/10.5281/zenodo.20091834)
-[![Applied Sciences 2024](https://img.shields.io/badge/Applied%20Sciences%202024-blue.svg)](https://doi.org/10.3390/app14198620)
-[![License: CC-BY-4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](LICENSE)
+[![DOI](https://img.shields.io/badge/DOI-10.3390%2Fapp14198620-blue.svg)](https://doi.org/10.3390/app14198620)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](LICENSE)
 
 *BERT + SHAP + ensemble learning for transparent sexism detection in social media.*
 
@@ -17,7 +17,7 @@
 | **Title**        | A Transparent Pipeline for Online Sexism Detection Based on the Combination of Explainable Artificial Intelligence, Feature Selection, and Ensemble Learning |
 | **Authors**      | Hadi Mohammadi, Anastasia Giachanou, Robert A. Bagheri |
 | **Affiliation**  | Utrecht University, The Netherlands |
-| **Venue**        | Applied Sciences, 14(19), 8620 |
+| **Venue**        | Applied Sciences, 14(19), 8620, 2024 |
 | **DOI (paper)**  | [10.3390/app14198620](https://doi.org/10.3390/app14198620) |
 | **Code archive** | [10.5281/zenodo.20091834](https://doi.org/10.5281/zenodo.20091834) (this repository, snapshot v1.0-thesis) |
 
@@ -54,17 +54,34 @@ If you use this code or data, please cite **both** the paper and this code archi
 
 ---
 
-## Key Contributions
+## Overview
 
-- Transparent detection pipeline with interpretable predictions
-- Analysis of linguistic patterns associated with sexist content
-- Comparison of explanation methods (SHAP vs LIME) for text classification
-- Human evaluation of model explanations
+This repository contains the code, notebooks, data derivatives, and figures behind the transparent sexism-detection pipeline: BERT-based classifiers on EXIST 2023/2024 tweets, SHAP token attributions (overall, per language, and per annotator demographic group), and an ensemble combining ML and DL approaches. It supports reproducing the SHAP and demographic analyses reported in the paper.
+
+## Key Features
+
+- **Transparent detection pipeline** with interpretable predictions
+- **Analysis of linguistic patterns** associated with sexist content
+- **Comparison of explanation methods** (SHAP vs LIME) for text classification
+- **Human evaluation** of model explanations
 
 <div align="center">
 <img src="figures/model.png" alt="Model Architecture" width="500"/>
 <br><i>Ensemble model architecture combining ML and DL approaches</i>
 </div>
+
+## Quick Start
+
+```bash
+git clone https://github.com/mohammadi-hadi/Explainable-Sexism-Detection.git
+cd Explainable-Sexism-Detection
+
+# To run the analysis notebooks
+pip install pandas numpy torch transformers scikit-learn shap matplotlib seaborn
+jupyter lab notebooks/
+```
+
+The paper provides full methodology and references the figures in `figures/`. SHAP token importances aggregated over the test set are in `data/significant_tokens.csv`; per-demographic-group SHAP attributions are in `data/demographic_word_importance/`.
 
 ## Repository Structure
 
@@ -118,20 +135,15 @@ Explainable-Sexism-Detection/
     └── EDA1.png … EDA6.png                       # Exploratory data analysis
 ```
 
-> **Note on data:** Raw EXIST 2023/2024 tweet text is included in some CSVs to support reproducibility of the SHAP and demographic analyses. The original shared-task data is © the EXIST organisers; please cite their papers and respect their terms of use when redistributing or reusing.
+## Data
 
-## Quick Start
+Raw EXIST 2023/2024 tweet text is included in some CSVs to support reproducibility of the SHAP and demographic analyses. The original shared-task data is © the EXIST organisers; please cite their papers and respect their terms of use when redistributing or reusing. See `data/ethics_reference.md` for data sources and the ethics statement.
 
-```bash
-git clone https://github.com/mohammadi-hadi/Explainable-Sexism-Detection.git
-cd Explainable-Sexism-Detection
+## Related Work
 
-# To run the analysis notebooks
-pip install pandas numpy torch transformers scikit-learn shap matplotlib seaborn
-jupyter lab notebooks/
-```
-
-The paper provides full methodology and references the figures in `figures/`. SHAP token importances aggregated over the test set are in `data/significant_tokens.csv`; per-demographic-group SHAP attributions are in `data/demographic_word_importance/`.
+- [Exist-2023](https://github.com/mohammadi-hadi/Exist-2023) — BERT / XLM-RoBERTa / DistilBERT voting ensemble for the EXIST 2023 shared task (CLEF 2023)
+- [Sexism-Detection-in-Social-Media](https://github.com/mohammadi-hadi/Sexism-Detection-in-Social-Media) — mirror of the EXIST 2023 system notebook
+- [BehAv-PO](https://github.com/mohammadi-hadi/BehAv-PO) — behavioral cluster-driven multi-agent preference optimization for sexism detection (EXIST 2024)
 
 ## License
 
@@ -141,3 +153,7 @@ This work is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/
 
 - **Hadi Mohammadi** — Utrecht University
 - Website: [mohammadi.cv](https://mohammadi.cv)
+
+## Acknowledgments
+
+The EXIST shared-task organisers provided the underlying tweet data; please cite their papers and respect their terms of use.
