@@ -22,3 +22,7 @@ The EXIST 2023 dataset was created under the ethical guidelines of the organizin
 ## Usage
 
 Data used solely for research purposes as permitted by the shared task terms.
+
+## Redistribution
+
+Because access runs through shared-task registration, the corpora are not redistributed with this repository. The tweet text and the per-annotator demographic records were removed from `data/` on 7 August 2026; `data/README.md` explains how to obtain them from the organisers. Only aggregate word-and-score results remain here.

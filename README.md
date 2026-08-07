@@ -101,20 +101,13 @@ Explainable-Sexism-Detection/
 │   ├── LLama_70B.ipynb                           # LLaMA-70B sexism evaluation (English)
 │   └── LLama_70B_Spanish.ipynb                   # LLaMA-70B sexism evaluation (Spanish)
 ├── data/
+│   ├── README.md                                 # What is here, and how to get the corpora
 │   ├── ethics_reference.md                       # Data sources and ethics statement
 │   ├── significant_tokens.csv                    # SHAP token importances
-│   ├── EXIST2024_training_Task1.csv              # EXIST 2024 Task 1 training subset
-│   ├── train_all_tasks.csv                       # Aggregated training data across tasks
-│   ├── train_df_augmented.csv                    # Back-translation augmented training
-│   ├── final_dataframe_with_sexism_scores.csv    # Per-tweet sexism predictions
-│   ├── final_dataframe_with_shap_scores.csv      # Per-tweet SHAP token attributions
-│   ├── df_lang_es.csv                            # Spanish-only annotated subset
 │   ├── coef_df.csv                               # Logistic-regression coefficients
 │   ├── important_tokens1_es.csv                  # Top SHAP tokens (Spanish)
 │   ├── important_words_general.csv               # Top SHAP words (overall)
 │   ├── token_overlaps_Spanish.csv                # Token-overlap matrix across categories
-│   ├── clean_data_en_demographic_statistics.csv  # Demographic-group annotation stats (EN)
-│   ├── clean_data_es_demographic_statistics.csv  # Demographic-group annotation stats (ES)
 │   ├── genai_results.csv                         # GenAI/GenP/GenXAI/GenPXAI scenario predictions
 │   └── demographic_word_importance/              # 45 per-demographic SHAP-token CSVs
 └── figures/
@@ -137,7 +130,9 @@ Explainable-Sexism-Detection/
 
 ## Data
 
-Raw EXIST 2023/2024 tweet text is included in some CSVs to support reproducibility of the SHAP and demographic analyses. The original shared-task data is © the EXIST organisers; please cite their papers and respect their terms of use when redistributing or reusing. See `data/ethics_reference.md` for data sources and the ethics statement.
+`data/` holds the aggregate results the paper is drawn from: SHAP token importances overall, per language and per annotator demographic group. Those are word-and-score tables, and the figures and tables in the paper can be reproduced from them directly.
+
+The EXIST and EDOS corpora themselves are **not** in this repository. Their organisers release them to registered participants under their own terms, and the files carry live account names and per-annotator demographic records. `data/README.md` lists what was removed and how to obtain it from the source; `data/ethics_reference.md` carries the ethics statement.
 
 ## Related Work
 
@@ -148,6 +143,8 @@ Raw EXIST 2023/2024 tweet text is included in some CSVs to support reproducibili
 ## License
 
 This work is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+
+That covers the code, notebooks, figures and the aggregate result files in this repository. It does not extend to the EXIST or EDOS corpora, which are not included here and remain under their organisers' terms.
 
 ## Contact
 
