@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this code or data, please cite both the paper and this software archive."
-title: "A Transparent Pipeline for Online Sexism Detection Based on the Combination of Explainable Artificial Intelligence, Feature Selection, and Ensemble Learning"
+title: "A Transparent Pipeline for Identifying Sexism in Social Media: Combining Explainability with Model Prediction"
 type: software
 version: "v1.0-thesis"
 date-released: "2026-05-09"
@@ -40,7 +40,7 @@ abstract: >-
   words and phrases responsible for each decision.
 preferred-citation:
   type: article
-  title: "A Transparent Pipeline for Online Sexism Detection Based on the Combination of Explainable Artificial Intelligence, Feature Selection, and Ensemble Learning"
+  title: "A Transparent Pipeline for Identifying Sexism in Social Media: Combining Explainability with Model Prediction"
   year: 2024
   journal: "Applied Sciences"
   doi: "10.3390/app14198620"
