@@ -14,7 +14,7 @@
 
 |                  |                                                                          |
 | ---------------- | ------------------------------------------------------------------------ |
-| **Title**        | A Transparent Pipeline for Online Sexism Detection Based on the Combination of Explainable Artificial Intelligence, Feature Selection, and Ensemble Learning |
+| **Title**        | A Transparent Pipeline for Identifying Sexism in Social Media: Combining Explainability with Model Prediction |
 | **Authors**      | Hadi Mohammadi, Anastasia Giachanou, Robert A. Bagheri |
 | **Affiliation**  | Utrecht University, The Netherlands |
 | **Venue**        | Applied Sciences, 14(19), 8620, 2024 |
@@ -34,7 +34,7 @@ If you use this code or data, please cite **both** the paper and this code archi
 
 ```bibtex
 @article{mohammadi2024explainable,
-  title         = {A Transparent Pipeline for Online Sexism Detection Based on the Combination of Explainable Artificial Intelligence, Feature Selection, and Ensemble Learning},
+  title         = {A Transparent Pipeline for Identifying Sexism in Social Media: Combining Explainability with Model Prediction},
   author        = {Mohammadi, Hadi and Giachanou, Anastasia and Bagheri, Robert A.},
   year          = {2024},
   journal       = {Applied Sciences},
