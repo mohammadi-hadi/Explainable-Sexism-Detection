@@ -138,7 +138,7 @@ The EXIST and EDOS corpora themselves are **not** in this repository. Their orga
 
 - [Exist-2023](https://github.com/mohammadi-hadi/Exist-2023) — BERT / XLM-RoBERTa / DistilBERT voting ensemble for the EXIST 2023 shared task (CLEF 2023)
 - [Sexism-Detection-in-Social-Media](https://github.com/mohammadi-hadi/Sexism-Detection-in-Social-Media) — mirror of the EXIST 2023 system notebook
-- [BehAv-PO](https://github.com/mohammadi-hadi/BehAv-PO) — behavioral cluster-driven multi-agent preference optimization for sexism detection (EXIST 2024)
+- [MAP-PO](https://github.com/mohammadi-hadi/MAP-PO) — behavioral cluster-driven multi-agent preference optimization for sexism detection (EXIST 2024)
 
 ## License
 
